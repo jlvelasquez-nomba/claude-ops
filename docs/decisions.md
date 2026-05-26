@@ -43,3 +43,14 @@ Architecture Decision Records (ADRs). One per significant decision. Format:
   - (b) Two parallel versions — rejected, maintenance burden.
 - **Cost:** Outside contributors may find tone strange. That's fine; primary user is me.
 - **Date:** 2026-05-26.
+
+## ADR-003: Baseline knowledge as starting point (never empty-handed)
+
+- **Decision:** Rule #0 (no-fabrication) is amended to make explicit: my training + acquired knowledge ARE legitimate STARTING DRAFTS, as long as labeled honestly ("from memory", "guess", "haven't verified") and paired with a verification path. Empty-hands "I don't know" replies when baseline knowledge exists is itself a misuse of Rule #0.
+- **Context:** Operator feedback 2026-05-26: *"rule #0 parte de tus conocimientos basicos + adquiridos, pero haces siempre verify con tus sources y todo lo descrito. solo es añadir que en vez de quedarte con manos vacias, prefiero que hagas algo con lo que ya sabes."*
+- **Alternatives:**
+  - (a) Keep Rule #0 as-is — rejected, allows empty-hands misuse.
+  - (b) Drop the verify requirement entirely — rejected, lets fabrication in.
+  - (c) Add asymmetry table (draft OK for conversation, verify first for code/claims) — adopted.
+- **Cost:** Slightly more nuance in Rule #0 (~40 lines added). In exchange: no more "I don't have a verified source" empty responses when baseline knowledge could draft something useful.
+- **Date:** 2026-05-26.
