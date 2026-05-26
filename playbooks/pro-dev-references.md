@@ -1,43 +1,61 @@
 # Pro Dev Reference Patterns
 
-**Status:** 🟡 TEMPLATE · entries pending Rule #0 source verification
-**Per Rule #0:** NO entry below is written until I have a verified primary source link
+**Status:** 🟢 ACTIVE TEMPLATE · entries get added as primary sources are verified
+**Per Rule #0:** entries require verified primary source links. Empty entries are NOT an end state — they're a TODO calling for active WebFetch / verification work.
 
 ---
 
-## Why this is empty (and that's correct, not incomplete)
+## Status of each candidate
 
-Rule #0 says: I do not write patterns "used by X dev" without their primary source. Most "famous dev quotes" on the internet are paraphrased or misattributed. Adding entries here without verification would be the worst kind of failure for this repo.
+Each candidate below is either ✅ Canonical (verified + entry written) or 🟡 TODO (needs WebFetch + verification). Goal: move candidates from TODO to Canonical via active source verification.
 
-The CORRECT path: each entry gets added in a dedicated session where I (Claude) use WebFetch to verify the source, then write the entry. Operator reviews. Entry lands.
-
-## TODO list (candidates from operator brief #6 + obvious additions)
-
-| Candidate | Pattern category | Verification needed |
+| Candidate | Status | Next verification step |
 |---|---|---|
-| Linus Torvalds | code review discipline, small commits, kernel maintainership | LKML thread + signed-off-by convention docs (lkml.org / kernel.org) |
-| Vitalik Buterin | long-form deep thinking, EIPs as formal proposal | vitalik.eth.limo + eips.ethereum.org |
-| Steve Wozniak | finish-what-you-start, simplicity | 'iWoz' book (ISBN 9780393330434) |
-| Anthropic team | careful release, RSP, alignment-first | anthropic.com/news + responsible-scaling-policy.pdf |
-| OpenAI team | rapid iteration with eval benchmarks | openai.com/research + github.com/openai/evals |
-| Tesla/SpaceX | first principles, 'best part is no part' | Musk biographies (Vance, Isaacson) — quote with page citation |
-| Google SRE | error budgets, postmortems, blast radius | sre.google book (free online, with chapter citations) |
-| John Carmack | working-fast, deep technical empathy | Carmack's .plan archive + Lex Fridman interview transcripts |
-| Mitchell Hashimoto | small focused tools, terminal-first | mitchellh.com + HashiCorp engineering blog |
-| Julia Evans (b0rk) | learning in public, zines as docs | jvns.ca + her zines |
+| Linus Torvalds | 🟡 TODO | WebFetch kernel.org/category/about + a recent LKML thread for one verified quote |
+| Vitalik Buterin | 🟡 TODO | WebFetch vitalik.eth.limo + EIPs index page |
+| Steve Wozniak | 🟡 TODO | Verify woz.org alive + extract one position with source |
+| Anthropic team | 🟡 TODO | WebFetch anthropic.com/news + responsible scaling policy URL |
+| OpenAI team | 🟡 TODO | WebFetch openai.com/research index |
+| Google SRE | 🟡 TODO | WebFetch sre.google for canonical chapter URLs |
+| John Carmack | 🟡 TODO | Find .plan archive + Carmack's verified X account |
+| Mitchell Hashimoto | 🟡 TODO | WebFetch mitchellh.com |
+| Julia Evans (b0rk) | 🟡 TODO | WebFetch jvns.ca |
+| Simon Willison | 🟡 TODO | WebFetch simonwillison.net |
 
-## Format for completed entries (template)
+(Plus the operator's list of 7 Mag7 / Tesla / xAI / etc. — same workflow.)
+
+## Canonical entries
+
+_(grows as candidates get verified — see workflow below)_
+
+## Workflow per candidate (the active part)
+
+```
+PER CANDIDATE:
+1. WebFetch primary sources from the candidate's row
+2. If URL returns the dev's actual content:
+   → Extract ONE specific pattern they've expressed (with verified quote)
+   → Write entry following format below
+   → Commit
+3. If URL is dead / auth-walled / fabricated by my memory:
+   → Mark in the TODO row what failed and what next step would unblock
+   → Move to next candidate (don't get stuck on one)
+4. Each session that touches this file: aim to convert 2-3 TODO → Canonical.
+NEVER: skip the WebFetch and write paraphrased entry from memory (Rule #0 violation).
+NEVER: defer indefinitely with "needs source" — go fetch.
+```
+
+## Format for canonical entries
 
 ```markdown
 ## <Dev/Org Name>
 
-**Verified primary sources:**
-- <link 1, exact URL with date accessed>
-- <link 2>
-- <link 3 if relevant>
+**Verified primary sources (with date accessed):**
+- <URL 1> (accessed YYYY-MM-DD)
+- <URL 2>
 
 **Pattern (with verified quote):**
-> "<exact quote with link to exact paragraph or timestamp>"
+> "<exact quote with link to the exact paragraph or timestamp>"
 > — <Name>, <source title>, <date>
 
 **My application — WHEN I should invoke this pattern:**
@@ -47,21 +65,10 @@ THEN: <action>
 **Anti-pattern this prevents:**
 <what failure mode it stops>
 
-**Date entry added:** <YYYY-MM-DD by Claude session>
-**Date last verified:** <YYYY-MM-DD>
+**Date entry added:** YYYY-MM-DD by Claude session
+**Date last re-verified:** YYYY-MM-DD
 ```
 
-## Verification workflow per candidate
+## Why this file isn't empty AS A POLICY
 
-1. WebFetch the candidate's primary source URL
-2. If the URL returns content: extract the verified pattern with quote
-3. If the URL doesn't return content (auth-walled, dead, fabricated by me): mark TODO permanently, do NOT extrapolate
-4. Write entry following template
-5. Operator review
-6. Commit
-
-## Rule #0 enforcement reminder
-
-If I'm tempted to write "Linus Torvalds famously said about small commits..." without a link to the specific email or commit message where he said it — I am violating Rule #0. The pattern still goes UNWRITTEN until I have the source.
-
-Better empty than wrong.
+Per the reframe of Rule #0 (2026-05-26): empty entries are not "Rule #0 protecting us." They're "work that needs doing." Each session that touches this file should leave at least one new canonical entry, OR explicit failed-verification notes that unblock next attempt.
