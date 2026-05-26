@@ -1,25 +1,36 @@
 # Primary sources — referenced across protocols
 
-**Per Rule #0**: specific documents (papers, RFCs, books, talks) that are cited by multiple protocols. Centralized so citations are consistent and updatable.
+**Status:** 🟡 TEMPLATE · entries added as protocols cite them
 
-**Status:** 🟡 STUB · grows as protocols get full content
+---
 
-## Format per entry
+## Canonical entries
+
+_(empty — each added as protocols cite specific documents)_
+
+## TODO — known citations from protocols
+
+These are referenced inside protocol files. When citing, add the full canonical entry here for re-use.
+
+| Citation | Cited by | Need to verify |
+|---|---|---|
+| HN thread 48090029 ("I'm going back to writing code by hand") | Chunk-size protocol, mode-separation | Already exists; capture key claims with quote + line |
+| Google SRE book (sre.google) | Postmortem-ritual, blast-radius | Confirm latest online version, extract relevant chapters |
+| Operator's foundational-brief.md (in this repo) | Most protocols | Already in this repo, link works |
+
+## Format for canonical entries (when added)
 
 ```markdown
 ## <Short title>
 
-- **Type:** paper | book | RFC | talk | blog post
+- **Type:** paper | book | RFC | talk | blog post | HN thread | code repo
 - **Author(s):** ...
-- **Year:** YYYY
-- **Source URL / DOI / ISBN:** ...
-- **Cited by protocols:** <list>
-- **Key claim relevant to claude-ops:** <one-liner>
-- **Quote (with line/page):** <verified, attribution rule per Rule #0>
+- **Year:** YYYY (or YYYY-MM-DD for blog posts)
+- **Source URL / DOI / ISBN:** <verified link>
+- **Cited by protocols:** <list of protocol files>
+- **Key claim relevant to claude-ops (verified quote):**
+  > "<quote with link to exact paragraph or page>"
+
+**Date verified:** YYYY-MM-DD
+**Reviewed by operator:** ✅ / ⏳
 ```
-
-## Seed candidates
-
-- 'I'm going back to writing code by hand' HN thread 48090029 (referenced in conversation 2026-05-25; key insight: 'success correlates with discipline you already practice')
-- Google SRE book (sre.google) — for postmortem, error budget, blast radius concepts
-- TBD

@@ -1,34 +1,49 @@
 # Companies — canonical engineering sources
 
-**Per Rule #0**: only orgs whose engineering content I can cite to primary source (their official blog, paper, repo, conference talk on their channel).
+**Status:** 🟡 TEMPLATE · no canonical entries yet
+**Per Rule #0:** every entry MUST have verified primary source link before promoting
 
-**Status:** 🟡 STUB · awaiting curation
+---
 
-## Format per entry
+## Canonical entries
+
+_(empty — each entry verified before promotion)_
+
+## TODO — candidate seed list
+
+| Candidate | Topics they're authoritative on | Primary sources to verify |
+|---|---|---|
+| Anthropic | LLM training, RLHF, RSP, alignment | anthropic.com/news, anthropic.com/research |
+| OpenAI | LLM eval, cookbook patterns, agents | platform.openai.com/docs, github.com/openai/openai-cookbook |
+| Google SRE | reliability, error budgets, postmortems, blast radius | sre.google (free book online) |
+| Stripe | payments, API design, dev experience | stripe.com/blog/engineering, stripe.com/docs |
+| Cloudflare | edge networking, security, scale | blog.cloudflare.com (engineering tag) |
+| Vercel | Next.js, edge runtime, DX | vercel.com/blog (engineering) |
+| Supabase | Postgres at scale, RLS, realtime | supabase.com/blog, github.com/supabase |
+| Netflix | streaming infra, chaos engineering | netflixtechblog.com |
+| Shopify | Rails at scale, e-commerce, Liquid | shopify.engineering |
+| GitHub | git workflows, scale, dev infra | github.blog (engineering) |
+| HashiCorp | infrastructure as code, Terraform | hashicorp.com/blog |
+| Discord | scaling chat infra, voice | discord.com/blog/engineering |
+
+## Format for canonical entries (when verified)
 
 ```markdown
 ## <Company>
 
-- **Engineering blog:** <URL>
+- **Engineering blog (verified):** <URL>
 - **Open source orgs:** <github.com/...>
-- **Papers / publications:** <link or repo>
-- **Conference channels:** <verified YT/Vimeo>
-- **⚠️ Caveats:** <e.g., 'their public blog lags 6 months behind internal practice'>
-- **Topics they're authoritative on:** <list with anchors>
+- **Public papers / publications:** <links with DOI when applicable>
+- **Conference channels (verified):** <YT/Vimeo URLs>
+- **⚠️ Caveats:** <e.g., 'their public blog lags 6 months behind internal practice', 'they pivoted from X stack to Y in YYYY'>
+- **Topics they're authoritative on (with anchor per topic):**
+  - <topic 1> → <specific blog post / paper / repo>
+  - <topic 2> → <specific source>
+
+**Date verified:** YYYY-MM-DD
+**Reviewed by operator:** ✅ / ⏳
 ```
 
-## Candidate seed list (TO VERIFY)
+## Verification workflow
 
-| Candidate | Topics | Status |
-|---|---|---|
-| Anthropic | LLM training, alignment, RSP | TO VERIFY |
-| OpenAI | LLM eval, cookbook patterns | TO VERIFY |
-| Google SRE | reliability, error budgets, postmortems | TO VERIFY (sre.google) |
-| Stripe | payments, API design, dev experience | TO VERIFY |
-| Cloudflare | edge, networking, infra | TO VERIFY |
-| Vercel | Next.js, edge runtime | TO VERIFY |
-| Supabase | Postgres at scale, RLS, realtime | TO VERIFY |
-| Netflix | streaming infra, chaos engineering | TO VERIFY |
-| Shopify | Rails at scale, e-commerce | TO VERIFY |
-| GitHub | git workflows, scale | TO VERIFY |
-| HashiCorp | infrastructure as code | TO VERIFY |
+Same as developers-canonical.md. Empty > fabricated.
