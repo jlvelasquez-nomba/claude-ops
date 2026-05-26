@@ -1,84 +1,63 @@
 # State — claude-ops
 
 **Last updated:** 2026-05-26 by Claude session (Juan)
-**Repo status:** Initial bootstrap COMPLETE. 15 protocols ACTIVE. Playbook + references remain structured templates pending Rule #0 verification.
+**Repo status:** Bootstrap COMPLETE. Rule #0 reframed as active gatekeeper. 4 devs + 1 company + 2 primary-sources verified and promoted to Canonical via WebFetch.
 
 ## 🟢 Complete (in main)
 
-- `README.md` — purpose, structure, reader (Claude)
-- `CLAUDE.md` — Tier 1/2/3 instructions
-- `docs/foundational-brief.md` — Juan's original brief (verbatim)
-- `docs/decisions.md` — ADR-000 (Rule #0), ADR-001 (format), ADR-002 (reader = Claude)
-- `docs/glossary.md` — terms
-- `docs/architecture.md` — 5-layer operating model
-- `docs/state.md` — this file
-- `protocols/README.md` — index (15/15 ACTIVE)
-- **15 protocols COMPLETE:**
-  - `no-fabrication.md` (Rule #0)
-  - `error-loop-detection.md`
-  - `memory-vs-reality.md`
-  - `survey-before-building.md`
-  - `postmortem-ritual.md`
-  - `blast-radius.md`
-  - `pushback-protocol.md`
-  - `compaction-ritual.md`
-  - `mode-separation.md`
-  - `chunk-size-protocol.md`
-  - `grand-scheme-first.md`
-  - `triangulate-references.md`
-  - `layer-by-layer.md`
-  - `functional-first.md`
-  - `realistic-ambitious.md`
+- `README.md`, `CLAUDE.md`
+- `docs/foundational-brief.md`, `docs/decisions.md` (3 ADRs), `docs/glossary.md`, `docs/architecture.md`, `docs/state.md`
+- `protocols/README.md` (index 15/15 ACTIVE)
+- **15 protocols ACTIVE** (all full content, Rule #0 format):
+  - `no-fabrication.md` (Rule #0 — refactored 2026-05-26 to active gatekeeper stance)
+  - `error-loop-detection.md`, `memory-vs-reality.md`, `survey-before-building.md`
+  - `postmortem-ritual.md`, `blast-radius.md`
+  - `pushback-protocol.md`, `compaction-ritual.md`, `mode-separation.md`
+  - `chunk-size-protocol.md`, `grand-scheme-first.md`
+  - `triangulate-references.md`, `layer-by-layer.md`, `functional-first.md`, `realistic-ambitious.md`
 
-## 🟡 In flight / templates pending Rule #0 verification
+- `playbooks/pro-dev-references.md` — active template (entries pending)
+- `references/README.md` — active template
+- `references/developers-canonical.md` — **4 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto) + 11 TODO
+- `references/companies-canonical.md` — **1 canonical** (Anthropic) + 11 TODO
+- `references/primary-sources.md` — **2 canonical** (SRE Book Ch.15, HN thread 48090029) + 2 TODO
 
-These files exist as structured templates with verification workflow, but no entries yet (Rule #0 forbids fabricating sources):
+## 🟡 Active TODO list (work to do via WebFetch verification, NOT permanently empty)
 
-- `playbooks/pro-dev-references.md` — TODO list of 7+ pro devs/orgs to source from primary
-- `references/developers-canonical.md` — candidate seed list (15 names), each needs primary source verification before promoting to canonical
-- `references/companies-canonical.md` — candidate seed list (~11 orgs), each needs primary source verification
-- `references/primary-sources.md` — specific documents (papers, books, RFCs) referenced across protocols
+Per Rule #0 active framing: these are work-items, not "Rule #0 forbids it" excuses.
 
-Each entry workflow:
-1. Claude finds verified primary sources via WebFetch
-2. Writes entry following format in file's README
-3. Operator reviews + ratifies
-4. Entry promoted from TODO to canonical
+- **developers-canonical.md TODO:** 11 candidates with explicit "Next verification step" each (Linus, Wozniak, Abramov, Rich Harris, Rauch, DHH, Karpathy, Carmack, antirez, Cassidoo, patio11)
+- **companies-canonical.md TODO:** 11 candidates (OpenAI, SRE org, Stripe, Cloudflare, Vercel, Supabase, Netflix, Shopify, GitHub, HashiCorp, Discord)
+- **primary-sources.md TODO:** 2 known citations (foundational-brief link, RSP doc)
+- **playbooks/pro-dev-references.md TODO:** patterns per verified dev — needs source-specific quotes
 
-## 🔵 Next phase
+Each session that touches references aims to convert 2-3 TODO → Canonical via WebFetch.
 
-When operator dedicates a session to references:
-1. Pick 3-5 candidates from `references/developers-canonical.md` TODO list
-2. WebFetch each to find verified primary sources
-3. Write entries
-4. Commit
+## ✅ Recently shipped (last 24h, full chronology)
 
-When operator dedicates a session to playbook:
-1. Pick 2-3 patterns from `playbooks/pro-dev-references.md` TODO list
-2. Find primary sources where each pattern is stated by the dev
-3. Write entries with quote + link
-4. Commit
-
-These should NOT be batched as a sprint. Better: 1-2 entries per dedicated session, verified properly, no rush.
-
-## 🚨 Risks / debt
-
-- **Loading mechanism depends on operator's global CLAUDE.md.** Without the pointer block, the repo doesn't change my behavior. Operator confirmed pasted (2026-05-26).
-- **Stubs in playbook/references may stay stubs** if no one dedicates time. Acceptable: empty references are honest. Fabricated references would be Rule #0 violation.
+- 2026-05-26 (1) — Bootstrap commit: README + CLAUDE.md + foundational-brief + docs + Rule #0 first version
+- 2026-05-26 (2) — 14 protocol stubs + 1 playbook stub + 3 reference stubs
+- 2026-05-26 (3) — Chunk A: 5 high-priority protocols full content
+- 2026-05-26 (4) — Chunk B: 5 medium-priority protocols full content
+- 2026-05-26 (5) — Chunk C: 4 remaining protocols full content (15/15 ACTIVE)
+- 2026-05-26 (6) — Final: index + state + reference templates
+- 2026-05-26 (7) — **REFACTOR Rule #0**: gatekeeper-not-excuse framing (operator feedback)
+- 2026-05-26 (8) — **First batch verifications**: 4 devs + 1 company + 2 primary-sources via WebFetch
 
 ## 🔄 Pre-flight (every session using this repo)
 
 ```
-1. cat protocols/no-fabrication.md     # Rule #0 (always)
-2. cat docs/state.md                   # this file (always)
-3. cat docs/foundational-brief.md      # first time loading (skip if seen)
+1. cat protocols/no-fabrication.md     # Rule #0 (active gatekeeper)
+2. cat docs/state.md                   # this file
+3. cat docs/foundational-brief.md      # first time loading
 4. When a Tier 2 trigger fires, load that protocol.
 ```
 
+## 🚨 Risks / debt
+
+- **Operator confirmed pasting claude-ops pointer in ~/.claude/CLAUDE.md global (2026-05-26).** Without this, repo doesn't change behavior.
+- **TODO entries are real work, not "fine to leave empty."** Per Rule #0 active framing, each session aims to convert 2-3 TODO → Canonical.
+
 ## 📝 Session log
 
-- **2026-05-26 (1)** — Bootstrap repo + Rule #0 complete + 14 stubs.
-- **2026-05-26 (2)** — Chunk A: 5 high-priority protocols complete (error-loop, memory, survey, postmortem, blast-radius).
-- **2026-05-26 (3)** — Chunk B: 5 medium protocols complete (pushback, compaction, mode-sep, chunk-size, grand-scheme).
-- **2026-05-26 (4)** — Chunk C: 4 remaining protocols complete (triangulate, layer-by-layer, functional-first, realistic-ambitious). All 15 protocols ACTIVE.
-- **2026-05-26 (5)** — Updated protocols/README.md index + this state.md. Playbook + 3 references files remain templates pending Rule #0 source verification.
+- **2026-05-26 (1-8)** — see "Recently shipped" above. Major reframe at (7) corrected Rule #0 from passive avoidance to active verification stance. First proof-of-active-stance at (8): 7 canonical entries via WebFetch.
