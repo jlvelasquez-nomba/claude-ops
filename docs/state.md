@@ -21,6 +21,9 @@
 - `references/developers-canonical.md` — **4 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto) + 11 TODO
 - `references/companies-canonical.md` — **1 canonical** (Anthropic) + 11 TODO
 - `references/primary-sources.md` — **2 canonical** (SRE Book Ch.15, HN thread 48090029) + 2 TODO
+- `references/claude-code-canonical.md` — distilled from verified code.claude.com/docs/en/best-practices (2026-05-27)
+- `references/coding-wikis-troubleshooting.md` — Section A (12 verified llms.txt) + Section B (5 docs URLs) + Section C (MDN + React ref + Tailwind community wiki). Every URL HTTP-verified 200.
+- `docs/decisions/ADR-gstack-integration.md` — gstack as proactive layer; claude-ops as reactive layer. Verified against gstack repo + ETHOS.md (2026-05-27). Pruned earlier draft's fabricated "8 commands" claim per Rule #0.
 
 ## 🟡 Active TODO list (work to do via WebFetch verification, NOT permanently empty)
 
