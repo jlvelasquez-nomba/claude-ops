@@ -1,7 +1,7 @@
 # State — claude-ops
 
-**Last updated:** 2026-05-26 by Claude session (Juan)
-**Repo status:** Bootstrap COMPLETE. Rule #0 reframed as active gatekeeper. 4 devs + 1 company + 2 primary-sources verified and promoted to Canonical via WebFetch.
+**Last updated:** 2026-05-27 by Claude session (Juan) — 22 references batch-verified via WebFetch
+**Repo status:** Bootstrap COMPLETE. Rule #0 reframed as active gatekeeper. References batch complete on this branch: 13 devs canonical + 2 PARTIAL, 11 companies canonical + 1 PARTIAL, 2 primary-sources canonical.
 
 ## 🟢 Complete (in main)
 
@@ -29,12 +29,12 @@
 
 Per Rule #0 active framing: these are work-items, not "Rule #0 forbids it" excuses.
 
-- **developers-canonical.md TODO:** 11 candidates with explicit "Next verification step" each (Linus, Wozniak, Abramov, Rich Harris, Rauch, DHH, Karpathy, Carmack, antirez, Cassidoo, patio11)
-- **companies-canonical.md TODO:** 11 candidates (OpenAI, SRE org, Stripe, Cloudflare, Vercel, Supabase, Netflix, Shopify, GitHub, HashiCorp, Discord)
-- **primary-sources.md TODO:** 2 known citations (foundational-brief link, RSP doc)
-- **playbooks/pro-dev-references.md TODO:** patterns per verified dev — needs source-specific quotes
+- **developers-canonical.md TODO:** ✅ 0 candidates — Rauch + Carmack remain PARTIAL (HTTP 429 / no public site) until next session can retry
+- **companies-canonical.md TODO:** ✅ 0 candidates — OpenAI remains PARTIAL (HTTP 403 to WebFetch; cookbook verified via gh CLI)
+- **primary-sources.md TODO:** 2 known citations still pending (foundational-brief link, RSP doc)
+- **playbooks/pro-dev-references.md TODO:** patterns per verified dev — needs source-specific quotes (+ operator's Mag7/Tesla/xAI list pending names)
 
-Each session that touches references aims to convert 2-3 TODO → Canonical via WebFetch.
+Each session aims to deepen existing canonical entries (quote-anchored fetches) OR convert PARTIAL → Canonical.
 
 ## ✅ Recently shipped (last 24h, full chronology)
 
@@ -46,6 +46,7 @@ Each session that touches references aims to convert 2-3 TODO → Canonical via 
 - 2026-05-26 (6) — Final: index + state + reference templates
 - 2026-05-26 (7) — **REFACTOR Rule #0**: gatekeeper-not-excuse framing (operator feedback)
 - 2026-05-26 (8) — **First batch verifications**: 4 devs + 1 company + 2 primary-sources via WebFetch
+- 2026-05-27 (refs-batch) — Big batch verification: 22 candidates fetched in parallel, 19 promoted to Canonical, 3 to PARTIAL with explicit failure-mode docs
 
 ## 🔄 Pre-flight (every session using this repo)
 
@@ -64,3 +65,4 @@ Each session that touches references aims to convert 2-3 TODO → Canonical via 
 ## 📝 Session log
 
 - **2026-05-26 (1-8)** — see "Recently shipped" above. Major reframe at (7) corrected Rule #0 from passive avoidance to active verification stance. First proof-of-active-stance at (8): 7 canonical entries via WebFetch.
+- **2026-05-27 (refs-batch)** — 22 references batch verification (this branch). 19 promoted to Canonical (9 devs + 10 companies on top of 5 existing). 3 marked PARTIAL with explicit failure-mode documentation: Rauch (HTTP 429 rate-limit), Carmack (no public personal site — primary venue is X auth-walled), OpenAI (HTTP 403 to platform + root; cookbook verified via gh CLI instead). All WebFetches batched in 2 parallel waves of 11. Each PARTIAL entry includes exact failure mode + next retry path per Rule #0.
