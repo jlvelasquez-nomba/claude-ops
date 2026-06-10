@@ -56,6 +56,15 @@ These maintainers don't publish a machine-readable index (verified 404 on 2026-0
 
 ---
 
+## Section D — General coding-practice guides (operator-supplied, verified 2026-06-10)
+
+| What | URL | Tier |
+|---|---|---|
+| **MIT/Broad CommLab — Best Practices for Coding, Organization, and Documentation** (Broad Research Communication Lab, Broad Institute of MIT & Harvard). Verified quote: *"Keeping in mind the needs of your audience – that is, either your future self or anyone else who might want to reuse your code – will help you to create concise, readable, and reusable code"* | https://mitcommlab.mit.edu/broad/commkit/best-practices-for-coding-organization-and-documentation/ | A (institutional) |
+| **DataCamp — Coding Best Practices: A Complete Guide (2026)** — commercial tutorial covering structure, docs, testing, security, AI-assisted dev. Useful checklist, not a standard | https://www.datacamp.com/tutorial/coding-best-practices-and-guidelines | B (commercial tutorial) |
+
+---
+
 ## Protocol — how to use these references mid-session
 
 1. **Before writing code with a framework** → fetch its row from Section A or B. Note the version it documents. Confirm it matches `package.json`. If mismatch, flag the operator before coding.

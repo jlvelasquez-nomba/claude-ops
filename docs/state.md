@@ -1,7 +1,7 @@
 # State — claude-ops
 
-**Last updated:** 2026-06-10 by Claude session (Juan) — TODO list cleared except operator-blocked item
-**Repo status:** Bootstrap COMPLETE. Rule #0 at v2. `prime` boot protocol live. References: 14 devs canonical + 1 PARTIAL (Carmack), 12 companies canonical, 4 primary-sources canonical. Playbook: 10 entries canonical (6 quote-anchored) + no-fabrication cases. Only open item blocked on operator: Mag7/Tesla/xAI names.
+**Last updated:** 2026-06-10 by Claude session (Juan) — Mag7 batch processed (Apple, NVIDIA, Meta, Alphabet, AWS + earlier Microsoft)
+**Repo status:** Bootstrap COMPLETE. Rule #0 at v2. `prime` boot protocol live. References: 14 devs canonical + 1 PARTIAL (Carmack), 18 companies canonical, 5 primary-sources canonical + 1 PARTIAL. Playbook: 16 entries canonical + no-fabrication cases. Mag7: 6/7 done — Tesla + xAI names never supplied.
 
 ## 🟢 Complete (in main)
 
@@ -17,12 +17,13 @@
   - `chunk-size-protocol.md`, `grand-scheme-first.md`
   - `triangulate-references.md`, `layer-by-layer.md`, `functional-first.md`, `realistic-ambitious.md`
 
-- `playbooks/pro-dev-references.md` — **11 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto, Linus, Wozniak, Anthropic, OpenAI, Google SRE, Carmack-mirror-sourced, Microsoft-operator-specified; 6 quote-anchored) + rest of operator Mag7/Tesla/xAI list pending
+- `playbooks/pro-dev-references.md` — **16 canonical** (10 devs/orgs + 6 operator-specified Mag7: Microsoft, Apple, NVIDIA, Meta, Alphabet, AWS)
 - `playbooks/no-fabrication-cases.md` — Rule #0 v2 case studies (extracted from v1)
 - `references/README.md` — active template
 - `references/developers-canonical.md` — **14 canonical + 1 PARTIAL** (Carmack — no true primary venue reachable; .plan mirror verified + flagged)
-- `references/companies-canonical.md` — **13 canonical** (OpenAI promoted 2026-06-10 via cookbook + gh API; Microsoft added 2026-06-10 from operator-supplied sources, verified via WebFetch + yt-dlp)
-- `references/primary-sources.md` — **4 canonical** (SRE Book Ch.15, HN thread 48090029, foundational-brief, Anthropic RSP) + 0 TODO
+- `references/companies-canonical.md` — **18 canonical** (Mag7 batch added 2026-06-10: Apple, NVIDIA, Meta, Alphabet-GCloud/YouTube, AWS — all from operator-supplied sources, 24 URLs verified; third-party sources tiered B inside entries, never canonical)
+- `references/primary-sources.md` — **5 canonical + 1 PARTIAL** (added: Coimbra "Overview of Facebook scalable architecture" metadata via Crossref; First Monday article PARTIAL — title only)
+- `references/coding-wikis-troubleshooting.md` — Section D added (MIT/Broad CommLab tier A + DataCamp tier B, operator-supplied)
 - `references/claude-code-canonical.md` — distilled from verified code.claude.com/docs/en/best-practices (2026-05-27)
 - `references/coding-wikis-troubleshooting.md` — Section A (12 verified llms.txt) + Section B (5 docs URLs) + Section C (MDN + React ref + Tailwind community wiki). Every URL HTTP-verified 200.
 - `docs/decisions/ADR-gstack-integration.md` — gstack as proactive layer; claude-ops as reactive layer. Verified against gstack repo + ETHOS.md (2026-05-27). Pruned earlier draft's fabricated "8 commands" claim per Rule #0.
@@ -31,7 +32,9 @@
 
 Per Rule #0 active framing: these are work-items, not "Rule #0 forbids it" excuses.
 
-- **BLOCKED ON OPERATOR:** Mag7/Tesla/xAI candidate names for the playbook (pending since 2026-05-27) — **1 received: Microsoft (2026-06-10, processed same day)**; remaining names pending
+- **Mag7 list: 6/7 done** (Microsoft, Apple, NVIDIA, Meta, Alphabet, AWS — all processed 2026-06-10). **Tesla + xAI names/sources never supplied** — ask operator whether still wanted, or close the line item
+- **First Monday article PARTIAL:** title verified, body fetch pending (authors/year/quote)
+- **Coimbra ACM paper:** metadata canonical via Crossref; PDF unread — only needed if its claims get cited
 - **Carmack PARTIAL:** no true primary venue reachable (X auth-walled; .plan archive is a verified-but-flagged mirror). Next: check if Keen Technologies publishes a blog/research page
 - **Deepening (optional, not blockers):** rauchg.com essay anchor (429 ×3 — retry later) · one LKML thread quote for Linus · one iWoz chapter quote for Wozniak · one specific cookbook guide URL for OpenAI
 
@@ -53,6 +56,7 @@ Each session aims to deepen existing canonical entries (quote-anchored fetches) 
 - 2026-06-10 (11) — PR #1 conflict resolved + merged (kept both 2026-05-27 sessions' facts); indexes + format conventions synced to v2 reality
 - 2026-06-10 (12) — **TODO list cleared**: 2 primary-sources entries (foundational-brief + RSP with verified quote) · Rauch + OpenAI promoted to Canonical via gh API + cookbook web fetch · Carmack mirror verified + flagged · 6 new playbook entries · 4 existing playbook entries quote-anchored. Remaining: operator names list + Carmack true-primary venue
 - 2026-06-10 (13) — **First operator Mag7 name: Microsoft.** Both supplied sources verified (Dev Center via WebFetch; YouTube channel consent-walled to WebFetch → verified via yt-dlp: 684k subs, agent-centric recent titles). Reference + playbook entry (pattern: pre-configured sandbox onboarding). Remaining names still pending
+- 2026-06-10 (14) — **Mag7 batch: Apple, NVIDIA, Meta, Alphabet, AWS.** 24 operator-supplied URLs verified in 5 WebFetch waves + gh API + Crossref. 5 company entries + 5 playbook patterns (Apple = design governance via artifacts, NVIDIA = APOD loop quote-anchored, Meta = shift errors to compile-time quote-anchored, Alphabet = pillar-walk reviews with AWS cross-triangulation, AWS = reference-architecture-first). Tiering enforced: codekarle/geeksforgeeks/greenware/Wikipedia/DataCamp flagged tier-B/tertiary inside entries, NOT canonical; Coimbra ACM paper resolved via Crossref (external academic study, ~2014, flagged as such); flux noted ARCHIVED. Mag7 6/7 — Tesla + xAI never supplied
 
 ## 🔄 Pre-flight (every session using this repo)
 
