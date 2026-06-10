@@ -1,15 +1,16 @@
 # State — claude-ops
 
-**Last updated:** 2026-05-27 by Claude session (Juan) — two parallel sessions merged: 22 references batch-verified via WebFetch + playbook canonical promotion
-**Repo status:** Bootstrap COMPLETE. Rule #0 reframed as active gatekeeper. References: 13 devs canonical + 2 PARTIAL, 11 companies canonical + 1 PARTIAL, 2 primary-sources canonical. Playbook: 4 dev entries canonical (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto).
+**Last updated:** 2026-06-10 by Claude session (Juan) — Rule #0 v2 + prime protocol shipped; PR #1 conflict resolved and merged
+**Repo status:** Bootstrap COMPLETE. Rule #0 at v2 (stakes×cost matrix, compressed core, cases in playbook). `prime` boot protocol live. References: 13 devs canonical + 2 PARTIAL, 11 companies canonical + 1 PARTIAL, 2 primary-sources canonical. Playbook: 4 dev entries canonical + no-fabrication cases.
 
 ## 🟢 Complete (in main)
 
 - `README.md`, `CLAUDE.md`
 - `docs/foundational-brief.md`, `docs/decisions.md` (3 ADRs), `docs/glossary.md`, `docs/architecture.md`, `docs/state.md`
-- `protocols/README.md` (index 15/15 ACTIVE)
-- **15 protocols ACTIVE** (all full content, Rule #0 format):
-  - `no-fabrication.md` (Rule #0 — refactored 2026-05-26 to active gatekeeper stance)
+- `protocols/README.md` (index 16/16 ACTIVE: 15 failure-mode + 1 boot)
+- **16 protocols ACTIVE** (all full content):
+  - `no-fabrication.md` (Rule #0 — **v2** 2026-06-10: stakes×cost matrix, compressed always-load core, cases moved to `playbooks/no-fabrication-cases.md`)
+  - `prime.md` (boot protocol — operator command `prime`: loads Rule #0, operator context, open threads)
   - `error-loop-detection.md`, `memory-vs-reality.md`, `survey-before-building.md`
   - `postmortem-ritual.md`, `blast-radius.md`
   - `pushback-protocol.md`, `compaction-ritual.md`, `mode-separation.md`
@@ -17,6 +18,7 @@
   - `triangulate-references.md`, `layer-by-layer.md`, `functional-first.md`, `realistic-ambitious.md`
 
 - `playbooks/pro-dev-references.md` — **4 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto) + operator Mag7/Tesla/xAI list pending
+- `playbooks/no-fabrication-cases.md` — Rule #0 v2 case studies (extracted from v1)
 - `references/README.md` — active template
 - `references/developers-canonical.md` — **13 canonical + 2 PARTIAL** (Rauch HTTP 429, Carmack no public site)
 - `references/companies-canonical.md` — **11 canonical + 1 PARTIAL** (OpenAI HTTP 403; cookbook verified via gh CLI)
@@ -48,11 +50,14 @@ Each session aims to deepen existing canonical entries (quote-anchored fetches) 
 - 2026-05-26 (8) — **First batch verifications**: 4 devs + 1 company + 2 primary-sources via WebFetch
 - 2026-05-27 (refs-batch) — Big batch verification: 22 candidates fetched in parallel, 19 promoted to Canonical, 3 to PARTIAL with explicit failure-mode docs
 - 2026-05-27 (9) — Housekeeping + playbook canonical entries for the 4 verified devs
+- 2026-06-10 (10) — **Rule #0 v2 + prime protocol** (PR #4): stakes×cost matrix, compressed core, cases → playbook; CLAUDE.md Tier 1 item 0 = `prime` command
+- 2026-06-10 (11) — PR #1 conflict resolved + merged (kept both 2026-05-27 sessions' facts); indexes + format conventions synced to v2 reality (this commit)
 
 ## 🔄 Pre-flight (every session using this repo)
 
 ```
-1. cat protocols/no-fabrication.md     # Rule #0 (active gatekeeper)
+0. Operator writes `prime` → execute protocols/prime.md (covers steps 1-2 + context)
+1. cat protocols/no-fabrication.md     # Rule #0 v2 (active gatekeeper)
 2. cat docs/state.md                   # this file
 3. cat docs/foundational-brief.md      # first time loading
 4. When a Tier 2 trigger fires, load that protocol.
@@ -68,3 +73,4 @@ Each session aims to deepen existing canonical entries (quote-anchored fetches) 
 - **2026-05-26 (1-8)** — see "Recently shipped" above. Major reframe at (7) corrected Rule #0 from passive avoidance to active verification stance. First proof-of-active-stance at (8): 7 canonical entries via WebFetch.
 - **2026-05-27 (refs-batch)** — 22 references batch verification. 19 promoted to Canonical (9 devs + 10 companies on top of 5 existing). 3 marked PARTIAL with explicit failure-mode documentation: Rauch (HTTP 429 rate-limit), Carmack (no public personal site — primary venue is X auth-walled), OpenAI (HTTP 403 to platform + root; cookbook verified via gh CLI instead). All WebFetches batched in 2 parallel waves of 11. Each PARTIAL entry includes exact failure mode + next retry path per Rule #0.
 - **2026-05-27 (9)** — Housekeeping: bumped layer-by-layer stub count to reality (15). Promoted Vitalik / Julia / Simon / Mitchell from playbook-TODO to playbook-Canonical with verified-source-backed WHEN/THEN patterns. Per operator: "como aceite a un coche" — entries kept lean, one actionable pattern each. (Ran parallel to refs-batch; merged 2026-06-10 with conflict resolution keeping both sessions' facts.)
+- **2026-06-10 (10-11)** — Rule #0 v2 shipped (PR #4): stakes×cost matrix, compressed core, case studies extracted to `playbooks/no-fabrication-cases.md`; `prime.md` boot protocol added (CLAUDE.md Tier 1 item 0). Then PR #1 unblocked: state.md conflict resolved keeping both parallel 2026-05-27 sessions, playbook TODO table synced to post-refs-batch reality (6 candidates have verified references — next step is derive-pattern, not re-fetch). Consistency pass: protocol/playbook indexes + CLAUDE.md format conventions updated to match v2 structure.
