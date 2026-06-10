@@ -15,12 +15,12 @@
 | Julia Evans (b0rk) | ✅ Canonical | Future: fetch one zine title for explicit philosophy quote |
 | Simon Willison | ✅ Canonical | Future: fetch one TIL post for direct quote |
 | Mitchell Hashimoto | ✅ Canonical | Future: fetch /writing for explicit principle quote |
-| Linus Torvalds | 🟡 TODO | WebFetch kernel.org/category/about + one verified LKML thread quote |
-| Anthropic team | 🟡 TODO | WebFetch anthropic.com/news + responsible scaling policy URL |
-| OpenAI team | 🟡 TODO | WebFetch openai.com/research index |
-| Google SRE | 🟡 TODO | WebFetch sre.google for canonical chapter URLs |
-| John Carmack | 🟡 TODO | Find .plan archive + Carmack's verified X account |
-| Steve Wozniak | 🟡 TODO | Verify woz.org alive + extract one position with source |
+| Linus Torvalds | 🟡 TODO (reference ✅ verified) | Derive WHEN/THEN from `references/developers-canonical.md` entry — no re-fetch needed |
+| Anthropic team | 🟡 TODO (reference ✅ verified) | Derive WHEN/THEN from `references/companies-canonical.md` entry — no re-fetch needed |
+| OpenAI team | 🟡 TODO (reference ⚠️ PARTIAL) | Retry fetch (HTTP 403 on 2026-05-27; cookbook verified via gh CLI), then derive pattern |
+| Google SRE | 🟡 TODO (reference ✅ verified) | Derive WHEN/THEN from `references/companies-canonical.md` entry — no re-fetch needed |
+| John Carmack | 🟡 TODO (reference ⚠️ PARTIAL) | No public personal site (verified 2026-05-27); unblock primary venue, then derive pattern |
+| Steve Wozniak | 🟡 TODO (reference ✅ verified) | Derive WHEN/THEN from `references/developers-canonical.md` entry — no re-fetch needed |
 
 (Plus the operator's Mag7 / Tesla / xAI list — pending names from Juan.)
 

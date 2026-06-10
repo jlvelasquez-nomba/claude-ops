@@ -1,7 +1,7 @@
 # Developers — canonical list
 
-**Status:** 🟢 ACTIVE · 4 canonical · 11 TODO
-**Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Goal: grow canonical list session by session, NOT keep empty.
+**Status:** 🟢 ACTIVE · 13 canonical · 2 partial-verification · 0 TODO
+**Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Partial-verification entries (URL identified but fetch blocked) are honest about what failed and what to retry next session.
 
 ---
 
@@ -76,34 +76,203 @@
 - **Date verified:** 2026-05-26 (Claude session, WebFetch — partial)
 - **Reviewed by operator:** ⏳
 
+### Linus Torvalds
+
+- **Canonical venue (verified):** https://github.com/torvalds — profile shows "Linus Torvalds" account, Portland OR, affiliated with Linux Foundation, 305k followers (accessed 2026-05-27)
+- **Pinned repos (verified):** `linux` (Linux kernel source tree, 235k stars), plus personal projects: `GuitarPedal` ("Linus learns analog circuits"), `AudioNoise`, `uemacs`
+- **Authoritative on:** Linux kernel design, Git internals (he wrote it), maintainer culture / code review discipline, OS-level system programming, long-term project leadership at scale
+- **Visible patterns (verified from his repo curation):** uses GitHub for kernel mirror but does NOT take PRs there (kernel work happens on LKML); hobby projects show same hands-on building habit he applies to kernel work
+- **⚠️ Caveats:**
+  - GitHub is a MIRROR of kernel work, not the source — actual kernel discussions live on the Linux Kernel Mailing List (LKML, https://lkml.org). Don't cite "Linus said X on GitHub" — cite the LKML thread.
+  - Many famous "Linus quotes" are from forum/email posts decades old. Always link to the actual LKML archive URL.
+- **Next verification step:**
+  - WebFetch a specific recent LKML thread (e.g., a kernel release announcement) for one verifiable quote with archive URL
+  - Cross-link kernel.org's "About Linus" page if it exists
+- **Date verified:** 2026-05-27 (Claude session, WebFetch via gh CLI)
+- **Reviewed by operator:** ⏳
+
+### Steve Wozniak
+
+- **Personal site (verified):** https://woz.org — "Officially Woz" branding, About + Woz Speaks + News sections (accessed 2026-05-27)
+- **Maintenance signal (verified):** recent content dated April 2026 (AI commentary), January 2026 Pictet Bank interview, ongoing speaking engagement page
+- **Topics covered (verified from site sections):** speaking engagements, news coverage of his appearances, WOZ-U technology training programs, photo galleries from events
+- **Authoritative on:** early personal computer engineering (Apple I/II design), engineering simplicity and elegance, finishing projects under hardware constraints, the founder-engineer mindset
+- **Visible pattern (verified):** site is curated more as a press/speaking hub than a technical blog — his deep technical writing lives in his autobiography "iWoz" (book, separate citation needed)
+- **⚠️ Caveats:**
+  - No technical blog posts surfaced from the homepage — this site is for booking/PR, not engineering writing
+  - The "WOZ-U" branded education program ran into criticism years back; cite carefully if relevant (separate verification needed for current status)
+- **Next verification step:**
+  - For engineering principles, treat "iWoz" (the book) as the primary technical source, not the website
+  - Verify any specific Wozniak quote against the book chapter/page, not website paraphrases
+- **Date verified:** 2026-05-27 (Claude session, WebFetch — site live, technical content limited)
+- **Reviewed by operator:** ⏳
+
+### Dan Abramov
+
+- **Personal site (verified):** https://overreacted.io — header reads "overreacted — A blog by Dan Abramov" with his photo (accessed 2026-05-27)
+- **Topics covered (verified from recent posts):** React Server Components, web architecture, JS fundamentals (closures, hooks, classes), developer experience, technical communication craft
+- **Recent verified posts (sample, accessed 2026-05-27):**
+  - "A Social Filesystem" — 2026-01-18 (about formats over apps)
+  - "Introducing RSC Explorer" — 2025-12-19 (hobby project)
+  - "Hire Me in Japan" — 2025-11-11 (job search post)
+  - "How to Fix Any Bug" — 2025-10-21 (on vibecoding)
+- **Authoritative on:** React mental models (he was on the React core team), React Server Components, technical writing that explains hard concepts without oversimplifying
+- **Visible pattern (verified from his post style):** explains complex topics conversationally, often with first-person reasoning shown ("I thought X, then realized Y"); blends technical depth with accessibility
+- **⚠️ Caveats:**
+  - "Hire Me in Japan" (Nov 2025) suggests he's in career-transition — his current employer is uncertain; verify before describing him as "React core team" today
+- **Next verification step:** fetch his most-cited "explain hooks" post for a quote-anchored entry on React mental models
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### Rich Harris
+
+- **Canonical venue (verified):** https://svelte.dev/blog — Rich Harris identified as author of foundational Svelte posts ("Svelte 3: Rethinking reactivity", "Announcing SvelteKit 1.0") (accessed 2026-05-27)
+- **Maintenance signal (verified):** monthly "What's new in Svelte" cadence active through May 2026 (Mar/Apr/May entries all present)
+- **Authoritative on:** framework design philosophy (compile-time vs runtime, the "disappearing framework" idea), Svelte/SvelteKit architecture, web framework critique
+- **Visible pattern (verified):** uses the official project blog as his primary tech writing venue (vs a separate personal blog); posts argue from first principles rather than benchmark numbers
+- **⚠️ Caveats:**
+  - This entry is anchored to the SVELTE blog, not a separate personal blog — his individual writing voice mixes with the official Svelte team voice on this URL
+  - For quotes attributable strictly to Rich (not "the Svelte team"), look for posts byline-attributed to him specifically
+- **Next verification step:**
+  - WebFetch one Rich-bylined post (e.g., "Rethinking reactivity") for a direct verified quote on framework philosophy
+  - Cross-check his X handle and personal site (if any) — not done in this session
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### Guillermo Rauch · ⚠️ PARTIAL VERIFICATION
+
+- **Identified primary venue:** https://rauchg.com
+- **🚫 Verification status (2026-05-27):** PARTIAL — WebFetch returned HTTP 429 (rate-limited) on two attempts. Site URL is correct per public knowledge (he's the founder of Vercel and Next.js core lead), but content not confirmed in this session.
+- **Believed authoritative on (unverified from his site this session):** Next.js architecture, edge runtime, developer experience, framework adoption strategy
+- **⚠️ Caveat:** until a successful WebFetch, do NOT cite "rauchg.com says X" — only cite Vercel's official blog (verified separately in companies-canonical.md) for company positions
+- **Next verification step:**
+  - Retry WebFetch in a future session (possibly with different User-Agent, or wait out rate-limit window)
+  - Alternative: verify via his Vercel team page or his X handle
+- **Date attempted:** 2026-05-27 (Claude session, WebFetch — rate-limited)
+- **Reviewed by operator:** ⏳
+
+### David Heinemeier Hansson (DHH)
+
+- **Personal site (verified):** https://world.hey.com/dhh — DHH's current blog on HEY (37signals's email product) (accessed 2026-05-27)
+- **Role (verified from posts):** Co-owner and CTO of 37signals
+- **Recent verified posts (sample, accessed 2026-05-27):**
+  - "Basecamp Five" — 2026-05-26
+  - "Celebrating computers at Omacon" — 2026-04-21
+  - "The malleable computer" — 2026-04-15
+  - "Panther Lake is the real deal" — 2026-04-06
+  - "Basecamp becomes agent accessible" — 2026-03-25
+- **Created (verified from his bio):** Ruby on Rails, Hotwire, Kamal, Omarchy
+- **Books (verified mention):** REWORK, It Doesn't Have to Be Crazy at Work, REMOTE
+- **Authoritative on:** Rails philosophy (convention over configuration, conceptual compression), opinionated framework design, remote-first work culture, anti-Big-Tech business stances
+- **⚠️ Caveats:**
+  - DHH's public stances are intentionally polemic — separate "DHH's opinion" from "industry consensus" when citing
+  - His "Cloud Exit" (37signals leaving AWS) was a real and documented move but cite the specific blog post, not the meme version
+- **Next verification step:** fetch one specific Rails-philosophy post (e.g., the original "Convention over configuration" framing) for a quote-anchored entry
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### Andrej Karpathy
+
+- **Personal site (verified):** https://karpathy.ai — accessed 2026-05-27
+- **Featured projects (verified):** micrograd, char-rnn, arxiv-sanity, neuraltalk2, ConvNetJS
+- **Bio (verified):** founding member at OpenAI (2015-17), Director of AI at Tesla (2017-22) leading Autopilot CV, returned to OpenAI (2023-24), currently producing educational AI content on YouTube
+- **Famous writing (verified listed):** "A Recipe for Training Neural Networks", "The Unreasonable Effectiveness of Recurrent Neural Networks"
+- **Teaching (verified):** Stanford CS 231n course on CNNs (he designed the first deep learning course at Stanford), recent YouTube lecture series on LLMs and AI
+- **Authoritative on:** building neural nets from scratch (pedagogy via micrograd, makemore), the "Software 2.0" framing, ML training methodology, transformer internals
+- **Visible pattern (verified):** teaches by re-building primitives from zero rather than starting from a framework; favors "do the simplest thing that works, then scale" over premature optimization
+- **⚠️ Caveats:**
+  - His YouTube series is current, but specific lecture timestamps shift as he updates — cite by video title + minute, not URL with `t=` if you can avoid it
+  - His Twitter/X is active and influential but auth-walled to WebFetch
+- **Next verification step:** fetch his "Recipe for Training Neural Networks" post for one quote-anchored entry on his methodology
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### John Carmack · ⚠️ PARTIAL VERIFICATION
+
+- **Identified primary venue (unverified):** X / Twitter (@ID_AA_Carmack — heavily active there)
+- **🚫 Verification status (2026-05-27):** PARTIAL — WebFetch to https://github.com/ID_AA_Carmack returned HTTP 404 (that handle is X-specific, not GitHub). Carmack does not maintain a public personal blog or website that we've verified — his primary writing venue today is X/Twitter, which is auth-walled to WebFetch.
+- **Believed authoritative on (NOT verified from primary sources this session):** game engine architecture (Doom, Quake), VR/AR systems engineering (formerly Oculus CTO), working speed / focus rituals, AGI research (Keen Technologies, current role)
+- **⚠️ Caveats:**
+  - Carmack's famous ".plan" files from the id Software era survive in archives (e.g., https://github.com/ESWAT/john-carmack-plan-archive — community-maintained, verify before citing) but are 1996-2000s era
+  - Cite by exact .plan file date or specific X post URL — never paraphrase from memory
+- **Next verification step:**
+  - Verify the community .plan archive URL above is the canonical one
+  - Identify whether Keen Technologies (his current company) publishes any blog/research
+- **Date attempted:** 2026-05-27 (Claude session, WebFetch — wrong venue tried, X auth-walled)
+- **Reviewed by operator:** ⏳
+
+### Antirez (Salvatore Sanfilippo)
+
+- **Personal site (verified):** https://antirez.com — accessed 2026-05-27
+- **Recent verified posts (sample):**
+  - "Distributing LLM inference in DwarfStar" — 2 days ago (Mac Studio + unified memory for local LLMs)
+  - "Alternatives for the EDIT tool of LLM agents" — 8 days ago
+  - "A few words on DS4" — 12 days ago (DwarfStar 4 local AI integration)
+  - "Redis array type: short story of a long development" — 23 days ago (new Redis data structure, AI-assisted development)
+  - "AI cybersecurity is not proof of work" — 41 days ago
+- **Topics covered (verified from his posts):** AI/LLM inference + optimization, Redis architecture and development, distributed systems, programming philosophy / craftsmanship
+- **Authoritative on:** Redis design (he wrote it), data structure design under hard performance constraints, C systems programming, the "small focused tool" engineering philosophy, recently — running LLMs on consumer hardware
+- **Visible pattern (verified from his post titles):** writes about his hands-on experiments (DwarfStar series, Redis features being built); narrates the development process rather than presenting finished announcements
+- **⚠️ Caveats:** he stepped back from Redis Labs years ago — current Redis features may not be his work; verify per-feature attribution
+- **Next verification step:** fetch one specific Redis-design post for a verifiable quote on data structure philosophy
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### Cassidy Williams
+
+- **Personal site (verified):** https://cassidoo.co — accessed 2026-05-27
+- **Current role (verified from site):** Senior Director of Developer Advocacy at GitHub
+- **Self-described as:** startup advisor, investor, open source contributor, internet meme creator (also: mechanical keyboards, music, teaching)
+- **Recent verified posts (sample):**
+  - "A simple clustering algorithm for lists" — 2026-05-24 (sorting pattern she discovered organizing toys)
+  - "La Pedra Go Club in Barcelona" — 2026-05-18 (travel)
+  - "Shipping todometer, version 3!" — 2026-05-02 (personal app)
+  - "Codemotion Madrid 2026 recap" — 2026-04-28
+  - "Connecting the Logitech MX Creative Console to Elgato Lights" — 2026-04-13
+- **Authoritative on:** developer advocacy at scale, making technical content accessible to broad developer audiences, the dev-influencer playbook, JavaScript / React for beginners
+- **Visible pattern (verified from her post mix):** alternates technical posts with travel/personal posts; technical posts often pattern-mine from non-technical observations (the toy-sorting algorithm)
+- **⚠️ Caveats:** her current GitHub Developer Advocacy role colors her positions on dev tools — note conflict of interest when citing her on GitHub features
+- **Next verification step:** fetch one specific "how to teach JS" post for a quote-anchored entry on her pedagogical approach
+- **Date verified:** 2026-05-27 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
+### Patrick McKenzie (patio11)
+
+- **Original blog (verified):** https://www.kalzumeus.com — older posts but still his canonical archive (accessed 2026-05-27)
+- **Current primary venues (referenced from kalzumeus, NOT independently fetched this session):**
+  - Newsletter: **Bits about Money** (https://www.bitsaboutmoney.com — needs separate verification fetch)
+  - Podcast: **Complex Systems** (weekly)
+- **Self-description (verified from site):** systems thinking applied to businesses; his "self-assigned score is median value created for software people times number of software people impacted"
+- **Recent verified posts on kalzumeus (sample):**
+  - "Bank CEO: Retract your debanking piece? Me: No." — 2025-02-10
+  - "Tether's Troubles in November 2022" — 2022-11-11
+  - "Tether Required Recapitalization In May 2022" — 2022-05-20
+- **Topics covered (verified):** financial infrastructure and banking systems, cryptocurrency (skeptical), career advice for engineers, complex systems analysis, software business
+- **Authoritative on:** technical communication for engineers (his "Salary Negotiation" guide is canonical), payments/banking infrastructure (he worked at Stripe for years), B2B SaaS sales
+- **Visible pattern (verified):** writes long-form explainers that thread financial/operational expertise with engineering audience awareness; treats public blog posts as durable artifacts (some posts from 2010s still cited)
+- **⚠️ Caveats:**
+  - kalzumeus is no longer his daily venue — current writing is on Bits about Money. Cite the current venue when relevant.
+  - Many older kalzumeus posts (~2013-era) about Japan + SaaS are still cited but represent a different career phase
+- **Next verification step:** fetch https://www.bitsaboutmoney.com to verify it's live + add a "Current venue" section to this entry
+- **Date verified:** 2026-05-27 (Claude session, WebFetch — kalzumeus verified, current venue deferred)
+- **Reviewed by operator:** ⏳
+
+---
+
 ## TODO — candidates pending verification
 
-Each row = active verification work to do, NOT permanently empty.
+(All previously-listed candidates have been moved to Canonical or marked PARTIAL above. Empty until new operator-suggested candidates land — see operator's Mag7 / Tesla / xAI list, pending names from Juan.)
 
-| Candidate | Why relevant | Next verification step | Status |
-|---|---|---|---|
-| Linus Torvalds | code review discipline, git workflow, kernel maintainership | WebFetch github.com/torvalds + one verified LKML thread quote | TODO |
-| Steve Wozniak | engineering simplicity, finishing things | Verify woz.org alive; check Internet Archive for backup if needed | TODO |
-| Dan Abramov | React mental models, technical writing clarity | WebFetch overreacted.io | TODO |
-| Rich Harris | Svelte design choices, framework critique | WebFetch svelte.dev/team + recent Rich blog if any | TODO |
-| Guillermo Rauch | DX, framework design (Next.js, Vercel) | WebFetch rauchg.com | TODO |
-| DHH (David Heinemeier Hansson) | Rails philosophy, conceptual compression | WebFetch dhh.dk | TODO |
-| Andrej Karpathy | ML pedagogy, building from scratch | WebFetch karpathy.ai | TODO |
-| John Carmack | working speed, deep technical writing | Find Carmack's verified X account + .plan archive URL | TODO |
-| Antirez (Salvatore Sanfilippo) | Redis design, antirez blog | WebFetch antirez.com | TODO |
-| Cassidy Williams | dev advocacy, accessible explanations | WebFetch cassidoo.co | TODO |
-| Patrick McKenzie (patio11) | technical communication, software business | WebFetch kalzumeus.com | TODO |
+---
 
 ## Format for canonical entries
-
-(See the entries above as worked examples.)
 
 ```markdown
 ### <Full Name>
 
-- **Personal site (verified):** <URL> — what identifies it (accessed YYYY-MM-DD)
-- **Topics covered (verified from <site source>):** ...
-- **Recent verified posts:** ... (with URLs)
+- **Personal site / canonical venue (verified):** <URL> — what identifies it (accessed YYYY-MM-DD)
+- **Topics covered (verified from <source>):** ...
+- **Recent verified posts:** ... (with URLs / dates)
 - **Authoritative on:** ...
 - **Visible patterns (verified):** ...
 - **⚠️ Caveats:** ...
@@ -112,11 +281,17 @@ Each row = active verification work to do, NOT permanently empty.
 - **Reviewed by operator:** ⏳ / ✅
 ```
 
+For partial-verification entries (URL identified, fetch blocked):
+- Use header `### NAME · ⚠️ PARTIAL VERIFICATION`
+- State the failure mode explicitly under `🚫 Verification status (date)`
+- Document what was attempted and what's needed to complete verification
+
 ## Verification workflow (active)
 
 1. Pick 1 candidate from TODO list
 2. WebFetch each "Next verification step" URL
 3. If URL returns the dev's actual content: ✅, write entry following format
 4. If URL is dead / wrong / fabricated: note explicitly in the TODO row what failed
-5. Submit to operator for ratification
-6. On approval: row moves from TODO to Canonical
+5. If URL is rate-limited / auth-walled: write PARTIAL entry per format above
+6. Submit to operator for ratification
+7. On approval: row moves from TODO to Canonical (or PARTIAL)
