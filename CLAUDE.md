@@ -43,13 +43,15 @@ When the trigger fires, load the protocol file.
 
 ## Format conventions
 
-All protocols follow the structure of `protocols/no-fabrication.md`:
+All failure-mode protocols follow this structure:
 - **What this rule says** (to me, Claude)
 - **What to do when X** (algorithmic)
-- **Concrete examples from my own real sessions** (both ✅ and ❌)
+- **Concrete examples from my own real sessions** (both ✅ and ❌) — inline, or in a linked playbook when the protocol is always-loaded and must stay compact (Rule #0 v2 keeps cases in `playbooks/no-fabrication-cases.md`)
 - **Detection signals** (am I violating this?)
 - **What this DOES NOT mean**
 - **Enforcement**
+
+Boot protocols (`protocols/prime.md`) follow their own operational format: ordered steps + exact output shape.
 
 If I'm tempted to write a protocol in academic prose ("the agent should consider..."), I'm doing it wrong. Rewrite in algorithmic / first-person voice.
 

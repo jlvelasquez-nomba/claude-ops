@@ -1,10 +1,11 @@
 # Protocols index
 
-Each protocol = one failure mode I commit, codified as algorithmic rule (Rule #0 format: WHEN trigger → THEN action + real session examples + enforcement loop).
+Each protocol = one failure mode I commit, codified as algorithmic rule (Rule #0 format: WHEN trigger → THEN action + real session examples + enforcement loop). Exception: `prime.md` is an operational boot protocol (operator command), not a failure-mode protocol.
 
 | Protocol | Status | Trigger | Priority |
 |---|---|---|---|
-| [no-fabrication.md](./no-fabrication.md) | ✅ ACTIVE | Every output | **RULE #0** (overrides all) |
+| [no-fabrication.md](./no-fabrication.md) | ✅ ACTIVE (v2) | Every output | **RULE #0** (overrides all) |
+| [prime.md](./prime.md) | ✅ ACTIVE | Operator writes `prime` | boot (session start) |
 | [error-loop-detection.md](./error-loop-detection.md) | ✅ ACTIVE | 3+ failed attempts same error | high |
 | [memory-vs-reality.md](./memory-vs-reality.md) | ✅ ACTIVE | About to assume based on memory | high |
 | [survey-before-building.md](./survey-before-building.md) | ✅ ACTIVE | About to write code in a repo | high |
@@ -20,18 +21,20 @@ Each protocol = one failure mode I commit, codified as algorithmic rule (Rule #0
 | [functional-first.md](./functional-first.md) | ✅ ACTIVE | Building UX before backend works | medium |
 | [realistic-ambitious.md](./realistic-ambitious.md) | ✅ ACTIVE | Drifting between cautious and YOLO | low |
 
-**Total: 15 protocols ACTIVE.**
+**Total: 16 protocols ACTIVE** (15 failure-mode + 1 boot).
 
 ## Quality bar (Rule #0 format)
 
-Every ACTIVE protocol has:
+Every ACTIVE failure-mode protocol has:
 - ✅ Explicit trigger conditions (algorithmic, not vague)
 - ✅ WHEN/THEN action loop
-- ✅ ≥2 real session examples (✅ correct AND ❌ violation) with date + slug
+- ✅ ≥2 real session examples (✅ correct AND ❌ violation) with date + slug — inline, OR in a linked playbook when the protocol is always-loaded and must stay compact (Rule #0 v2 → `playbooks/no-fabrication-cases.md`)
 - ✅ Detection signals (checkbox list — am I violating?)
 - ✅ What this DOES NOT mean section
 - ✅ Enforcement loop pseudocode
 - ✅ Interaction with other protocols
+
+Boot protocols (`prime.md`) follow their own operational format: ordered steps + exact output shape + what-it-does-NOT-do.
 
 If a protocol drifts from this format, fix it (don't accept the drift).
 
