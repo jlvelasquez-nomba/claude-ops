@@ -1,7 +1,7 @@
 # State — claude-ops
 
-**Last updated:** 2026-06-10 by Claude session (Juan) — Rule #0 v2 + prime protocol shipped; PR #1 conflict resolved and merged
-**Repo status:** Bootstrap COMPLETE. Rule #0 at v2 (stakes×cost matrix, compressed core, cases in playbook). `prime` boot protocol live. References: 13 devs canonical + 2 PARTIAL, 11 companies canonical + 1 PARTIAL, 2 primary-sources canonical. Playbook: 4 dev entries canonical + no-fabrication cases.
+**Last updated:** 2026-06-10 by Claude session (Juan) — TODO list cleared except operator-blocked item
+**Repo status:** Bootstrap COMPLETE. Rule #0 at v2. `prime` boot protocol live. References: 14 devs canonical + 1 PARTIAL (Carmack), 12 companies canonical, 4 primary-sources canonical. Playbook: 10 entries canonical (6 quote-anchored) + no-fabrication cases. Only open item blocked on operator: Mag7/Tesla/xAI names.
 
 ## 🟢 Complete (in main)
 
@@ -17,12 +17,12 @@
   - `chunk-size-protocol.md`, `grand-scheme-first.md`
   - `triangulate-references.md`, `layer-by-layer.md`, `functional-first.md`, `realistic-ambitious.md`
 
-- `playbooks/pro-dev-references.md` — **4 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto) + operator Mag7/Tesla/xAI list pending
+- `playbooks/pro-dev-references.md` — **10 canonical** (Vitalik, Julia Evans, Simon Willison, Mitchell Hashimoto, Linus, Wozniak, Anthropic, OpenAI, Google SRE, Carmack-mirror-sourced; 6 quote-anchored) + operator Mag7/Tesla/xAI list pending
 - `playbooks/no-fabrication-cases.md` — Rule #0 v2 case studies (extracted from v1)
 - `references/README.md` — active template
-- `references/developers-canonical.md` — **13 canonical + 2 PARTIAL** (Rauch HTTP 429, Carmack no public site)
-- `references/companies-canonical.md` — **11 canonical + 1 PARTIAL** (OpenAI HTTP 403; cookbook verified via gh CLI)
-- `references/primary-sources.md` — **2 canonical** (SRE Book Ch.15, HN thread 48090029) + 2 TODO
+- `references/developers-canonical.md` — **14 canonical + 1 PARTIAL** (Carmack — no true primary venue reachable; .plan mirror verified + flagged)
+- `references/companies-canonical.md` — **12 canonical** (OpenAI promoted 2026-06-10: cookbook verified at developers.openai.com + gh API; root site still bot-walled, scoped caveat kept)
+- `references/primary-sources.md` — **4 canonical** (SRE Book Ch.15, HN thread 48090029, foundational-brief, Anthropic RSP) + 0 TODO
 - `references/claude-code-canonical.md` — distilled from verified code.claude.com/docs/en/best-practices (2026-05-27)
 - `references/coding-wikis-troubleshooting.md` — Section A (12 verified llms.txt) + Section B (5 docs URLs) + Section C (MDN + React ref + Tailwind community wiki). Every URL HTTP-verified 200.
 - `docs/decisions/ADR-gstack-integration.md` — gstack as proactive layer; claude-ops as reactive layer. Verified against gstack repo + ETHOS.md (2026-05-27). Pruned earlier draft's fabricated "8 commands" claim per Rule #0.
@@ -31,10 +31,9 @@
 
 Per Rule #0 active framing: these are work-items, not "Rule #0 forbids it" excuses.
 
-- **developers-canonical.md TODO:** ✅ 0 candidates — Rauch + Carmack remain PARTIAL (HTTP 429 / no public site) until next session can retry
-- **companies-canonical.md TODO:** ✅ 0 candidates — OpenAI remains PARTIAL (HTTP 403 to WebFetch; cookbook verified via gh CLI)
-- **primary-sources.md TODO:** 2 known citations still pending (foundational-brief link, RSP doc)
-- **playbooks/pro-dev-references.md TODO:** 6 candidates with verified references but no playbook entry yet (Linus, Wozniak, Anthropic, OpenAI, Google SRE, Carmack) — derive WHEN/THEN patterns from the already-verified references, no re-fetch needed except the 2 PARTIALs. Plus operator's Mag7/Tesla/xAI list (names pending) + deeper quote-anchored fetches for the 4 already-canonical devs.
+- **BLOCKED ON OPERATOR:** Mag7/Tesla/xAI candidate names for the playbook (pending since 2026-05-27) — nothing can start without the names
+- **Carmack PARTIAL:** no true primary venue reachable (X auth-walled; .plan archive is a verified-but-flagged mirror). Next: check if Keen Technologies publishes a blog/research page
+- **Deepening (optional, not blockers):** rauchg.com essay anchor (429 ×3 — retry later) · one LKML thread quote for Linus · one iWoz chapter quote for Wozniak · one specific cookbook guide URL for OpenAI
 
 Each session aims to deepen existing canonical entries (quote-anchored fetches) OR convert PARTIAL → Canonical.
 
@@ -51,7 +50,8 @@ Each session aims to deepen existing canonical entries (quote-anchored fetches) 
 - 2026-05-27 (refs-batch) — Big batch verification: 22 candidates fetched in parallel, 19 promoted to Canonical, 3 to PARTIAL with explicit failure-mode docs
 - 2026-05-27 (9) — Housekeeping + playbook canonical entries for the 4 verified devs
 - 2026-06-10 (10) — **Rule #0 v2 + prime protocol** (PR #4): stakes×cost matrix, compressed core, cases → playbook; CLAUDE.md Tier 1 item 0 = `prime` command
-- 2026-06-10 (11) — PR #1 conflict resolved + merged (kept both 2026-05-27 sessions' facts); indexes + format conventions synced to v2 reality (this commit)
+- 2026-06-10 (11) — PR #1 conflict resolved + merged (kept both 2026-05-27 sessions' facts); indexes + format conventions synced to v2 reality
+- 2026-06-10 (12) — **TODO list cleared**: 2 primary-sources entries (foundational-brief + RSP with verified quote) · Rauch + OpenAI promoted to Canonical via gh API + cookbook web fetch · Carmack mirror verified + flagged · 6 new playbook entries · 4 existing playbook entries quote-anchored. Remaining: operator names list + Carmack true-primary venue
 
 ## 🔄 Pre-flight (every session using this repo)
 
@@ -74,3 +74,4 @@ Each session aims to deepen existing canonical entries (quote-anchored fetches) 
 - **2026-05-27 (refs-batch)** — 22 references batch verification. 19 promoted to Canonical (9 devs + 10 companies on top of 5 existing). 3 marked PARTIAL with explicit failure-mode documentation: Rauch (HTTP 429 rate-limit), Carmack (no public personal site — primary venue is X auth-walled), OpenAI (HTTP 403 to platform + root; cookbook verified via gh CLI instead). All WebFetches batched in 2 parallel waves of 11. Each PARTIAL entry includes exact failure mode + next retry path per Rule #0.
 - **2026-05-27 (9)** — Housekeeping: bumped layer-by-layer stub count to reality (15). Promoted Vitalik / Julia / Simon / Mitchell from playbook-TODO to playbook-Canonical with verified-source-backed WHEN/THEN patterns. Per operator: "como aceite a un coche" — entries kept lean, one actionable pattern each. (Ran parallel to refs-batch; merged 2026-06-10 with conflict resolution keeping both sessions' facts.)
 - **2026-06-10 (10-11)** — Rule #0 v2 shipped (PR #4): stakes×cost matrix, compressed core, case studies extracted to `playbooks/no-fabrication-cases.md`; `prime.md` boot protocol added (CLAUDE.md Tier 1 item 0). Then PR #1 unblocked: state.md conflict resolved keeping both parallel 2026-05-27 sessions, playbook TODO table synced to post-refs-batch reality (6 candidates have verified references — next step is derive-pattern, not re-fetch). Consistency pass: protocol/playbook indexes + CLAUDE.md format conventions updated to match v2 structure.
+- **2026-06-10 (12)** — TODO-list completion run. Verification wins: RSP announcement fetched (direct quote secured) · Rauch identity verified via `gh api users/rauchg` (rauchg.com still 429 ×3 — promoted with scoped caveat) · OpenAI cookbook verified live at developers.openai.com/cookbook + org/repo via gh API (root 403 persists — promoted with scoped caveat) · Carmack .plan archive verified as community MIRROR of floodyberry.com (stays PARTIAL; mirror flagged, never cited as primary). Playbook: 6 new entries derived from verified references (Linus = canonical-venue discipline, Wozniak = route-to-substance, Anthropic = capability-gated safeguards, OpenAI = executable docs, SRE = ops-as-software, Carmack = daily .plan → state.md session log) + 4 existing entries quote-anchored (Vitalik fv.html, Julia wizardzines, Simon TIL count+self-description, Mitchell building-block-economy). primary-sources at 4/4 canonical. Only operator-blocked item remains: Mag7/Tesla/xAI names.

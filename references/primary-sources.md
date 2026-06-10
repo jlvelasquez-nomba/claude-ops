@@ -1,6 +1,6 @@
 # Primary sources — referenced across protocols
 
-**Status:** 🟢 ACTIVE · 2 canonical · 2 TODO
+**Status:** 🟢 ACTIVE · 4 canonical · 0 TODO
 **Per Rule #0 (active interpretation):** entries added as protocols cite specific documents
 
 ---
@@ -43,12 +43,33 @@
 - **Date verified:** 2026-05-25 (Claude session, WebFetch)
 - **Reviewed by operator:** ⏳
 
+### Operator's foundational brief (this repo)
+
+- **Type:** internal document (canonical operator framing)
+- **Author:** Juan (operator), 2026-05-26
+- **URL (verified):** [docs/foundational-brief.md](../docs/foundational-brief.md) — in-repo, no external fetch needed (verified present 2026-06-10)
+- **Cited by protocols:** most protocols reference the operator's original framing
+- **Authoritative on:** why claude-ops exists, the operator's expectations of Claude's working discipline
+- **⚠️ Caveat:** internal source — authoritative for THIS repo's intent, not an external engineering claim
+- **Date verified:** 2026-06-10 (Claude session, file present in repo)
+- **Reviewed by operator:** ⏳
+
+### Anthropic Responsible Scaling Policy (updated)
+
+- **Type:** policy announcement (company primary channel)
+- **Author:** Anthropic
+- **URL (verified):** https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy (accessed 2026-06-10)
+- **Published:** 2024-10-15 (per page)
+- **Verified direct quote:** "We will not train or deploy models unless we have implemented safety and security measures that keep risks below acceptable levels."
+- **Verified structure:** graduated ASL Standards that increase with model capability; two named capability thresholds trigger enhanced safeguards (autonomous AI R&D, CBRN weapons assistance)
+- **Cited by protocols:** candidate for `blast-radius.md` (capability-gated safeguards pattern)
+- **⚠️ Caveat:** announcement page, not the full policy PDF — for clause-level claims, fetch the policy document itself
+- **Date verified:** 2026-06-10 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳
+
 ## TODO — known citations from protocols still needing canonical entries
 
-| Citation | Cited by | Next verification step |
-|---|---|---|
-| Operator's foundational-brief.md (this repo) | Most protocols | Already in repo at docs/foundational-brief.md — link from protocols, no external WebFetch needed |
-| Anthropic Responsible Scaling Policy | (not yet cited; candidate for `blast-radius.md`) | WebFetch https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy for direct quote |
+(none — all known citations have canonical entries as of 2026-06-10)
 
 ## Format for canonical entries
 
