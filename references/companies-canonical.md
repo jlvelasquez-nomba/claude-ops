@@ -1,11 +1,72 @@
 # Companies — canonical engineering sources
 
-**Status:** 🟢 ACTIVE · 13 canonical · 0 partial-verification · 0 TODO
+**Status:** 🟢 ACTIVE · 18 canonical · 0 partial-verification · 0 TODO
 **Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Partial-verification entries are honest about what fetch failed and what to retry.
 
 ---
 
 ## Canonical entries
+
+### Apple (developer org) · operator-specified
+
+- **Dev portal (verified):** https://developer.apple.com/ (accessed 2026-06-10) — WWDC26 featured, platforms iOS/iPadOS/macOS/tvOS/visionOS/watchOS 27, agent-centric sessions ("Xcode, agents, and you", "Debug and profile agentic experiences")
+- **Documentation (title-verified):** https://developer.apple.com/documentation/ — "Featured | Apple Developer Documentation"; content is JS-rendered, framework list not extractable via WebFetch
+- **Forums (verified):** https://developer.apple.com/forums/ — 16 topic categories confirmed (UI Frameworks, ML & AI, Spatial Computing, Design, etc.)
+- **Design hub (verified):** https://developer.apple.com/design/ — headline "Design incredible apps and games that integrate seamlessly with Apple platforms"; lists HIG, Apple Design Resources (official Figma/Sketch templates), SF Symbols (7,000+ symbols), Icon Composer, Design Awards
+- **HIG (title-verified):** https://developer.apple.com/design/human-interface-guidelines — "Human Interface Guidelines | Apple Developer Documentation"; body JS-rendered
+- **Authoritative on:** Apple platform APIs, design-system governance (HIG + resources + symbol library), developer community structure
+- **⚠️ Caveats:** documentation + HIG body content is JS-walled to WebFetch — title-level verification only; for specific HIG claims, fetch the specific subsection URL or label as unverified
+- **Date verified:** 2026-06-10 (Claude session, WebFetch ×5)
+- **Reviewed by operator:** ⏳ (sources supplied by operator 2026-06-10)
+
+### NVIDIA (developer org) · operator-specified
+
+- **Dev portal (verified):** https://developer.nvidia.com/ (accessed 2026-06-10) — CUDA Toolkit 13.1, TensorRT 10 under Latest Releases; topics: AI, Graphics & Rendering, HPC, Autonomous Vehicles
+- **Forums (verified):** https://forums.developer.nvidia.com/ — categories AI & Data Science, Gaming and Visualization, Omniverse
+- **Downloads (verified):** https://developer.nvidia.com/downloads — NGC hub + per-domain SDKs (CUDA Toolkit, HPC SDK, Jetson, Isaac, Clara, DRIVE, Riva, Omniverse)
+- **Training (verified):** https://www.nvidia.com/en-us/training/ — Deep Learning Institute: self-paced + instructor-led + certifications; "Access to fully configured, GPU-accelerated servers in the cloud" for hands-on practice
+- **CUDA C++ Best Practices Guide (verified, quote-anchored):** https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html (v13.3) — APOD cycle (Assess → Parallelize → Optimize → Deploy): *"a cyclical process: initial speedups can be achieved, tested, and deployed with only minimal initial investment of time, at which point the cycle can begin again by identifying further optimization opportunities."*
+- **Authoritative on:** GPU/accelerated computing, performance optimization methodology (APOD), developer education at scale (DLI)
+- **Date verified:** 2026-06-10 (Claude session, WebFetch ×5)
+- **Reviewed by operator:** ⏳ (sources supplied by operator 2026-06-10)
+
+### Meta (engineering org) · operator-specified
+
+- **Engineering blog (verified):** https://engineering.fb.com/ (accessed 2026-06-10) — recent posts confirmed: "Lights Out, Systems On" (2026-06-03), "SilverTorch: Index as Model" (2026-05-26), "Reel Friends" (2026-05-13)
+- **Key post (verified, quote-anchored):** https://engineering.fb.com/2023/02/06/ios/facebook-ios-app-architecture/ — "The evolution of Facebook's iOS app architecture" (2023-02-06). Verified arc: ComponentKit declarative UI (2014, React-inspired) → dylib-based modular architecture (2016, against ~30s launch times) → Buck-generated plugin system (2018) that *"moved error detection from runtime to compile-time"*
+- **Flux (verified via gh API):** https://github.com/facebookarchive/flux — 17.5k stars, "Application Architecture for Building User Interfaces". **ARCHIVED** (last push 2023-03) — historical reference for unidirectional data flow, not a living project
+- **Authoritative on:** large-scale app architecture evolution, compile-time safety at thousands-of-engineers scale, declarative UI lineage (ComponentKit/React/Flux)
+- **⚠️ Caveats:**
+  - Flux is archived — cite as the historical origin of the unidirectional pattern, point to modern successors for current practice
+  - Two operator-supplied academic papers on Facebook architecture live in `references/primary-sources.md` with PARTIAL status (First Monday title-verified; ACM DOI 403-walled)
+  - Operator-supplied third party (verified as third-party, tier B): codekarle.com Facebook system design — educational breakdown by Daub Technovision, NOT Meta content; useful for interview-style component maps, never citable as "how Facebook works"
+- **Date verified:** 2026-06-10 (Claude session, WebFetch ×3 + gh API)
+- **Reviewed by operator:** ⏳ (sources supplied by operator 2026-06-10)
+
+### Alphabet — Google Cloud & YouTube (developer org) · operator-specified
+
+- **Well-Architected Framework (verified, quote-anchored):** https://docs.cloud.google.com/architecture/framework (accessed 2026-06-10, es-419) — *"proporciona recomendaciones para ayudar a arquitectos, desarrolladores, administradores y otros profesionales de la nube a diseñar y operar una topología en la nube que sea segura, eficiente, resiliente, de alto rendimiento, rentable y sustentable."* Six pillars: operational excellence, security/privacy/compliance, reliability, cost optimization, performance optimization, sustainability (+ AI/ML cross-pillar perspective)
+- **Architecture Center hub (verified):** https://docs.cloud.google.com/architecture — note: the operator-supplied `?category=aiandmachinelearning` URL lands on the unfiltered hub; AI/ML is a category selected in-page
+- **Enterprise application blueprint (verified):** https://docs.cloud.google.com/architecture/blueprints/enterprise-application-blueprint/architecture — multi-region GKE, three environments, immutable containers, Binary Authorization, workload identity federation
+- **YouTube developer docs (verified):** https://developers.google.com/youtube/documentation — Data API, Live Streaming, Analytics, Reporting, Content ID, IFrame Player
+- **Data architecture explainer (title-verified):** https://cloud.google.com/discover/what-is-data-architecture — "¿Qué es la arquitectura de datos? | Google Cloud"; body truncated in fetch
+- **Authoritative on:** cloud architecture review methodology (six pillars), reference blueprints, YouTube platform APIs
+- **⚠️ Caveats — operator-supplied third-party/tertiary sources (verified as such, tier B; never cite as official):**
+  - geeksforgeeks.org YouTube system design — third-party educational reconstruction (CDN/DASH/Kafka/Cassandra component map), not Google architecture docs
+  - greenware-tech.com YouTube languages post — third-party blog, no citations to official sources
+  - Wikipedia "Programming languages used in most popular websites" — tertiary; lists YouTube backend as Python/C/C++/Java/Go with Vitess/BigTable/MariaDB; usable as a pointer to its primary citations, not as the source itself
+- **Note:** Google SRE (sre.google) has its own separate canonical entry above
+- **Date verified:** 2026-06-10 (Claude session, WebFetch ×8)
+- **Reviewed by operator:** ⏳ (sources supplied by operator 2026-06-10)
+
+### Amazon — AWS (developer org) · operator-specified
+
+- **Architecture Center (verified):** https://aws.amazon.com/architecture/ (accessed 2026-06-10) — "Reference Architecture Examples and Best Practices"; offers Well-Architected framework, reference architectures, diagrams, decision guides (ML, analytics, containers, storage, networking), whitepapers
+- **Well-Architected pillars (verified):** *"six pillars—operational excellence, security, reliability, performance efficiency, cost optimization, and sustainability"*
+- **Authoritative on:** reference-architecture-first design, decision guides, the Well-Architected review model
+- **Triangulation note:** AWS's six pillars and Google Cloud's six pillars converge almost exactly (independently published) — strong cross-vendor triangulation for pillar-based architecture review (per `protocols/triangulate-references.md`, this is the ≥2-primary-sources bar met for "industry standard")
+- **Date verified:** 2026-06-10 (Claude session, WebFetch)
+- **Reviewed by operator:** ⏳ (source supplied by operator 2026-06-10)
 
 ### Microsoft (developer org) · operator-specified
 

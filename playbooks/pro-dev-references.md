@@ -1,6 +1,6 @@
 # Pro Dev Reference Patterns
 
-**Status:** 🟢 ACTIVE · 11 canonical · 0 TODO (operator Mag7/Tesla/xAI list: 1 received — Microsoft; rest pending)
+**Status:** 🟢 ACTIVE · 16 canonical · 0 TODO (operator Mag7 list: 6/7 received + processed; Tesla + xAI names never supplied)
 **Purpose:** each entry below is **oil, not friction**. One actionable WHEN/THEN derived from a verified primary source. If I can't invoke it mid-work, it doesn't belong here.
 
 **Per Rule #0:** patterns are derived from facts verified via WebFetch on the date noted in `references/developers-canonical.md`. Where the pattern is my synthesis of the verified content (rather than a direct quote), that's flagged explicitly.
@@ -22,8 +22,13 @@
 | John Carmack | ✅ Canonical (mirror-sourced) | Future: Keen Technologies venue, or cite an exact dated .plan file |
 | Steve Wozniak | ✅ Canonical | Future: verify an iWoz chapter for a direct quote |
 | Microsoft (dev org) | ✅ Canonical · operator-specified | Future: anchor one learn.microsoft.com docs page |
+| Apple (dev org) | ✅ Canonical · operator-specified | Future: fetch a specific HIG subsection (body is JS-walled at the index) |
+| NVIDIA (dev org) | ✅ Canonical · quote-anchored (APOD) | — |
+| Meta (eng org) | ✅ Canonical · quote-anchored (iOS arch) | Future: read the Coimbra paper PDF if its claims get cited |
+| Alphabet (GCloud/YouTube) | ✅ Canonical · quote-anchored (6 pillars) | — |
+| Amazon (AWS) | ✅ Canonical · operator-specified | — |
 
-(Operator's Mag7 / Tesla / xAI list: Microsoft received 2026-06-10; remaining names pending from Juan.)
+(Operator's Mag7 list: Microsoft, Apple, NVIDIA, Meta, Alphabet, Amazon — all received + processed 2026-06-10. Tesla + xAI were mentioned on 2026-05-27 but names/sources never supplied.)
 
 ---
 
@@ -169,6 +174,71 @@
 **THEN:** ship it with a pre-configured workspace and realistic sample data so the first meaningful action happens immediately. Treat empty-state setup work as MY cost, not the user's.
 
 **Anti-pattern prevented:** empty-state platforms where the user must invent test data before learning anything — most abandon at that wall.
+
+---
+
+### Apple (developer org) · operator-specified
+
+**Verified primary sources:** https://developer.apple.com/design/ + HIG + Design Resources + SF Symbols (accessed 2026-06-10; full entry in `references/companies-canonical.md`). Verified headline: *"Design incredible apps and games that integrate seamlessly with Apple platforms."*
+
+**Pattern (synthesis from verified design-hub structure):** **design governance via artifacts, not taste.** Apple ships the contract (HIG), the raw materials (official Figma/Sketch templates), and the vocabulary (7,000+ SF Symbols) — so thousands of third-party teams converge on coherent design without Apple reviewing each screen.
+
+**WHEN:** starting UI work on any app or brand surface (SUPRA CRM, TheNomba properties, video-creator console).
+**THEN:** before pixel work, anchor to a written design contract (`DESIGN.md` = our HIG) plus a reusable token/component vocabulary — then every screen decision derives from the artifacts instead of being re-argued.
+
+**Anti-pattern prevented:** per-screen taste debates that drift the product into incoherence — the thing a design system exists to make impossible.
+
+---
+
+### NVIDIA (developer org) · operator-specified
+
+**Verified primary source:** CUDA C++ Best Practices Guide v13.3 (accessed 2026-06-10). Quote anchor — APOD: *"a cyclical process: initial speedups can be achieved, tested, and deployed with only minimal initial investment of time, at which point the cycle can begin again by identifying further optimization opportunities."*
+
+**Pattern (verified quote):** **APOD — Assess, Parallelize, Optimize, Deploy, repeat.** Profile to find the real hotspot, fix only that, ship the partial win, then re-assess. Optimization is a loop with early exits, not a project.
+
+**WHEN:** anything is slow — a render pipeline, a query, an agent workflow — and I'm tempted to "optimize properly."
+**THEN:** measure first (where does the time actually go?), fix the top hotspot only, ship, re-measure. Each cycle is small and deployed.
+
+**Anti-pattern prevented:** big-bang optimization based on assumed bottlenecks — weeks of work optimizing the part that wasn't slow.
+
+---
+
+### Meta (engineering org) · operator-specified
+
+**Verified primary source:** "The evolution of Facebook's iOS app architecture" (engineering.fb.com, 2023-02-06; accessed 2026-06-10). Verified arc: ComponentKit (2014) → dylibs against 30s launches (2016) → Buck-generated plugin system (2018) that *"moved error detection from runtime to compile-time."*
+
+**Pattern (verified from the post):** **shift errors left — from runtime to build-time.** At thousands-of-engineers scale, Meta's decisive move wasn't a faster runtime; it was making whole error classes impossible before the app ever runs.
+
+**WHEN:** the same class of failure keeps appearing at runtime — config typos, schema drift, broken references between modules.
+**THEN:** push the check earlier in the chain: a type, a schema validation in CI, generated code instead of hand-written glue. One build-time check beats a hundred runtime catches.
+
+**Anti-pattern prevented:** discovering at runtime (or in production) what the build could have rejected for free.
+
+---
+
+### Alphabet — Google Cloud (developer org) · operator-specified
+
+**Verified primary source:** Google Cloud Well-Architected Framework (accessed 2026-06-10). Six verified pillars: operational excellence · security/privacy/compliance · reliability · cost optimization · performance optimization · sustainability. AWS independently publishes a near-identical six-pillar set (verified same day) — cross-vendor triangulation.
+
+**Pattern (verified, triangulated ×2 vendors):** **pillar-walk reviews.** Architecture review means walking ALL named dimensions explicitly — not just the one the author cared about when designing.
+
+**WHEN:** reviewing or designing any system — an app architecture, a deploy setup, an automation pipeline (also: any `/plan-eng-review`-style pass).
+**THEN:** walk each pillar by name and write one line per pillar, including "not applicable because X." The empty pillar is where the incident lives.
+
+**Anti-pattern prevented:** reviews that only inspect the designer's favorite dimension — security reviewed deeply, cost and reliability never looked at.
+
+---
+
+### Amazon — AWS (developer org) · operator-specified
+
+**Verified primary source:** AWS Architecture Center (accessed 2026-06-10) — reference architectures, diagrams, decision guides, Well-Architected whitepapers.
+
+**Pattern (synthesis from verified center structure):** **reference-architecture-first.** AWS's default answer to "how do I build X" is a published, reviewed reference architecture plus a decision guide — not a blank canvas. Novel design is reserved for what has no precedent.
+
+**WHEN:** about to propose a system design (pairs with `protocols/triangulate-references.md`).
+**THEN:** first find the closest published reference architecture and diff my problem against it. Start from the reference and justify deviations — not from zero.
+
+**Anti-pattern prevented:** bespoke architectures for already-solved problems, carrying none of the lessons the reference baked in.
 
 ---
 
