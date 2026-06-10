@@ -4,6 +4,7 @@ You (Claude) are reading this because the operator's global CLAUDE.md pointed he
 
 ## Tier 1 — Non-negotiables (load these always at session start)
 
+0. **Operator command `prime`** → execute `protocols/prime.md` (loads Rule #0, operator context, open threads).
 1. **Read [protocols/no-fabrication.md](./protocols/no-fabrication.md) (Rule #0)** — this overrides all other rules. Internalize before any output.
 2. **Read [docs/state.md](./docs/state.md)** — current state of this repo (what's complete vs stub).
 3. **Read [docs/foundational-brief.md](./docs/foundational-brief.md)** if this is your first session loading this repo. Operator's original framing of why this exists.
