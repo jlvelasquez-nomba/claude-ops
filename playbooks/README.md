@@ -4,7 +4,7 @@ Patterns that worked, with case studies. Counterpart to `anti-patterns/` (which 
 
 | Playbook | Status | Subject |
 |---|---|---|
-| [pro-dev-references.md](./pro-dev-references.md) | 🟢 ACTIVE (4 canonical + 6 TODO) | WHEN/THEN patterns from verified pro devs — ALL with sources per Rule #0 |
+| [pro-dev-references.md](./pro-dev-references.md) | 🟢 ACTIVE (16 canonical, 0 TODO) | WHEN/THEN patterns from verified pro devs + Mag7 orgs — ALL with sources per Rule #0 |
 | [no-fabrication-cases.md](./no-fabrication-cases.md) | 🟢 ACTIVE | Real ✅/❌ case studies for Rule #0 v2 (extracted from v1; load after a violation or when calibrating) |
 
 Add playbooks ONLY when:

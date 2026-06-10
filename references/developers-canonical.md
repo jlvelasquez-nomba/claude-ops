@@ -261,7 +261,7 @@
 
 ## TODO — candidates pending verification
 
-(All previously-listed candidates have been moved to Canonical or marked PARTIAL above. Empty until new operator-suggested candidates land — see operator's Mag7 / Tesla / xAI list, pending names from Juan.)
+(All previously-listed candidates have been moved to Canonical or marked PARTIAL above. Operator's Mag7 list CLOSED at 6 on 2026-06-10 — all processed. Empty until new operator-suggested candidates land.)
 
 ---
 
