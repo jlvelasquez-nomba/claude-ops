@@ -1,6 +1,6 @@
 # Companies — canonical engineering sources
 
-**Status:** 🟢 ACTIVE · 11 canonical · 1 partial-verification · 0 TODO
+**Status:** 🟢 ACTIVE · 12 canonical · 0 partial-verification · 0 TODO
 **Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Partial-verification entries are honest about what fetch failed and what to retry.
 
 ---
@@ -33,19 +33,16 @@
 - **Date verified:** 2026-05-26 (Claude session, WebFetch)
 - **Reviewed by operator:** ⏳
 
-### OpenAI · ⚠️ PARTIAL VERIFICATION
+### OpenAI
 
-- **🚫 Verification status (2026-05-27):** PARTIAL — Both https://platform.openai.com/docs and https://openai.com (root) returned HTTP 403 to WebFetch (bot-walled). The main site exists in public knowledge but content not confirmable from this session via WebFetch.
-- **Verified alternative venue:** https://github.com/openai/openai-cookbook (accessed 2026-05-27 via `gh repo view`) — "Examples and guides for using the OpenAI API", points to https://cookbook.openai.com as the published rendering
-- **Authoritative on (verified from cookbook repo):** practical OpenAI API patterns, evaluation harnesses, fine-tuning recipes, function calling patterns
+- **Canonical venue (verified):** https://developers.openai.com/cookbook — the OpenAI Cookbook web rendering (accessed 2026-06-10; cookbook.openai.com 308-redirects here). Sample verified guide titles: "Build an Agent Improvement Loop with Traces, Evals, and Codex", "Build iterative repair loops with Codex", "How Perplexity Brought Voice Search to Millions Using the Realtime API". Topics: Agents, Evals, Multimodal, Text, Guardrails, Optimization.
+- **Canonical repo (verified):** https://github.com/openai/openai-cookbook — `gh api`: 74.1k stars, pushed 2026-06-10, "Examples and guides for using the OpenAI API". Org verified: `gh api orgs/openai` → 255 public repos.
+- **Authoritative on:** practical OpenAI API patterns, agent/eval harnesses, fine-tuning recipes, function calling patterns
 - **⚠️ Caveats:**
-  - For research papers, the platform docs page is the canonical source but WebFetch can't reach it — cite specific paper URLs (e.g., GPT-4 technical report) directly when needed
-  - Do NOT cite "openai.com says X" from memory — until a successful fetch, restrict citations to the cookbook repo or specific paper PDFs
-- **Next verification step:**
-  - Try alternative venues: WebFetch https://cookbook.openai.com (the published version of the cookbook repo)
-  - Try the OpenAI Help Center (help.openai.com)
-  - Or rely on the cookbook + specific paper URLs as authoritative
-- **Date attempted:** 2026-05-27 (main site 403; cookbook verified via gh CLI)
+  - https://openai.com (root) and /research remain HTTP 403 to WebFetch (retried 2026-06-10) — for research claims, cite specific paper URLs/PDFs directly, NOT "openai.com says X" from memory
+  - Scope of this canonical entry = cookbook + GitHub org (engineering/API patterns), not company research/PR positions
+- **Next verification step:** anchor one specific cookbook guide URL when a protocol cites an OpenAI pattern
+- **Date verified:** 2026-06-10 (Claude session, WebFetch on developers.openai.com/cookbook + gh CLI; root site still bot-walled)
 - **Reviewed by operator:** ⏳
 
 ### Google SRE (sre.google)

@@ -1,6 +1,6 @@
 # Developers — canonical list
 
-**Status:** 🟢 ACTIVE · 13 canonical · 2 partial-verification · 0 TODO
+**Status:** 🟢 ACTIVE · 14 canonical · 1 partial-verification · 0 TODO
 **Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Partial-verification entries (URL identified but fetch blocked) are honest about what failed and what to retry next session.
 
 ---
@@ -139,16 +139,16 @@
 - **Date verified:** 2026-05-27 (Claude session, WebFetch)
 - **Reviewed by operator:** ⏳
 
-### Guillermo Rauch · ⚠️ PARTIAL VERIFICATION
+### Guillermo Rauch
 
-- **Identified primary venue:** https://rauchg.com
-- **🚫 Verification status (2026-05-27):** PARTIAL — WebFetch returned HTTP 429 (rate-limited) on two attempts. Site URL is correct per public knowledge (he's the founder of Vercel and Next.js core lead), but content not confirmed in this session.
-- **Believed authoritative on (unverified from his site this session):** Next.js architecture, edge runtime, developer experience, framework adoption strategy
-- **⚠️ Caveat:** until a successful WebFetch, do NOT cite "rauchg.com says X" — only cite Vercel's official blog (verified separately in companies-canonical.md) for company positions
-- **Next verification step:**
-  - Retry WebFetch in a future session (possibly with different User-Agent, or wait out rate-limit window)
-  - Alternative: verify via his Vercel team page or his X handle
-- **Date attempted:** 2026-05-27 (Claude session, WebFetch — rate-limited)
+- **Canonical venue (verified):** https://github.com/rauchg — `gh api users/rauchg` returns name "Guillermo Rauch", company https://vercel.com, 16.9k followers, blog field → twitter.com/rauchg (accessed 2026-06-10)
+- **Secondary venue (still unverified):** https://rauchg.com — HTTP 429 on three attempts across two sessions (2026-05-27 ×2, 2026-06-10)
+- **Authoritative on:** Next.js architecture, edge runtime, developer experience, framework adoption strategy
+- **⚠️ Caveats:**
+  - Do NOT cite "rauchg.com says X" until that site fetches successfully — for essays, his X account or Vercel's blog (verified in companies-canonical.md) are the reachable primary channels
+  - The GitHub verification confirms identity + affiliation, not specific essay content
+- **Next verification step:** retry rauchg.com when the rate-limit window allows; anchor one specific essay
+- **Date verified:** 2026-06-10 (Claude session, gh CLI — identity + affiliation; site content still pending)
 - **Reviewed by operator:** ⏳
 
 ### David Heinemeier Hansson (DHH)
@@ -193,12 +193,12 @@
 - **🚫 Verification status (2026-05-27):** PARTIAL — WebFetch to https://github.com/ID_AA_Carmack returned HTTP 404 (that handle is X-specific, not GitHub). Carmack does not maintain a public personal blog or website that we've verified — his primary writing venue today is X/Twitter, which is auth-walled to WebFetch.
 - **Believed authoritative on (NOT verified from primary sources this session):** game engine architecture (Doom, Quake), VR/AR systems engineering (formerly Oculus CTO), working speed / focus rituals, AGI research (Keen Technologies, current role)
 - **⚠️ Caveats:**
-  - Carmack's famous ".plan" files from the id Software era survive in archives (e.g., https://github.com/ESWAT/john-carmack-plan-archive — community-maintained, verify before citing) but are 1996-2000s era
-  - Cite by exact .plan file date or specific X post URL — never paraphrase from memory
+  - The .plan archive at https://github.com/ESWAT/john-carmack-plan-archive is now VERIFIED to exist (accessed 2026-06-10: community-maintained by ESWAT, 1.4k stars, README states it is a "Mirror of the John Carmack .plan Archive on floodyberry.com", organized by_day/by_year) — it is a MIRROR, not a primary source. Cite as "Carmack .plan of <exact date>, via community mirror" — never as "Carmack's site"
+  - Files are 1996-2000s era; cite by exact .plan file date or specific X post URL — never paraphrase from memory
 - **Next verification step:**
-  - Verify the community .plan archive URL above is the canonical one
-  - Identify whether Keen Technologies (his current company) publishes any blog/research
-- **Date attempted:** 2026-05-27 (Claude session, WebFetch — wrong venue tried, X auth-walled)
+  - Identify whether Keen Technologies (his current company) publishes any blog/research — would be a true primary venue
+  - His verified X account remains auth-walled to WebFetch
+- **Date attempted:** 2026-05-27 (X auth-walled) · 2026-06-10 (mirror archive verified to exist, flagged as mirror)
 - **Reviewed by operator:** ⏳
 
 ### Antirez (Salvatore Sanfilippo)
