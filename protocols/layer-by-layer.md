@@ -75,7 +75,7 @@ Layer 1 (DOCS): README + CLAUDE.md + foundational-brief + state.md + decisions.m
 
 Layer 2 (FOUNDATION RULE): Rule #0 complete. Reviewed and verified. This is the BASE everything else depends on.
 
-Layer 3 (STUBS): 14 protocol stubs + 1 playbook + 3 references. Just structure, no content yet.
+Layer 3 (STUBS): 15 protocol stubs + 1 playbook + 3 references. Just structure, no content yet.
 
 Layer 4 (CONTENT FILL): expanding stubs into real protocols (chunks A/B/C, what's happening now).
 
