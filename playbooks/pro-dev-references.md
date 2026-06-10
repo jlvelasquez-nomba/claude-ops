@@ -1,6 +1,6 @@
 # Pro Dev Reference Patterns
 
-**Status:** 🟢 ACTIVE · 10 canonical · 0 TODO (+ operator Mag7/Tesla/xAI list pending names)
+**Status:** 🟢 ACTIVE · 11 canonical · 0 TODO (operator Mag7/Tesla/xAI list: 1 received — Microsoft; rest pending)
 **Purpose:** each entry below is **oil, not friction**. One actionable WHEN/THEN derived from a verified primary source. If I can't invoke it mid-work, it doesn't belong here.
 
 **Per Rule #0:** patterns are derived from facts verified via WebFetch on the date noted in `references/developers-canonical.md`. Where the pattern is my synthesis of the verified content (rather than a direct quote), that's flagged explicitly.
@@ -21,8 +21,9 @@
 | Google SRE | ✅ Canonical · quote-anchored | — |
 | John Carmack | ✅ Canonical (mirror-sourced) | Future: Keen Technologies venue, or cite an exact dated .plan file |
 | Steve Wozniak | ✅ Canonical | Future: verify an iWoz chapter for a direct quote |
+| Microsoft (dev org) | ✅ Canonical · operator-specified | Future: anchor one learn.microsoft.com docs page |
 
-(Plus the operator's Mag7 / Tesla / xAI list — pending names from Juan.)
+(Operator's Mag7 / Tesla / xAI list: Microsoft received 2026-06-10; remaining names pending from Juan.)
 
 ---
 
@@ -155,6 +156,19 @@
 **THEN:** write the dated log of what actually happened — what was tried, what failed, what's next — to `docs/state.md`'s session log (this repo's .plan equivalent). Facts, not narrative.
 
 **Anti-pattern prevented:** sessions that leave no trace, forcing the next session to re-derive the same context from scratch.
+
+---
+
+### Microsoft (developer org) · operator-specified
+
+**Verified primary sources:** https://developer.microsoft.com/en-us/microsoft-365 (accessed 2026-06-10) + YouTube channel "Microsoft Developer" (@MicrosoftDeveloper, 684k subs, verified via yt-dlp 2026-06-10). Full entry in `references/companies-canonical.md`.
+
+**Pattern (synthesis from verified program structure):** **pre-configured sandbox onboarding.** The M365 Developer Program's core offer is a free, renewable sandbox **pre-loaded with sample data** — a developer's first build happens in minutes against realistic content, not after hours of test-data setup. The TAP layer adds a feedback loop (early roadmap access ↔ product-group input) on top.
+
+**WHEN:** I'm building onboarding for a platform, demo, or integration — a CRM trial, an education product's first-run experience, an internal tool another agent will use.
+**THEN:** ship it with a pre-configured workspace and realistic sample data so the first meaningful action happens immediately. Treat empty-state setup work as MY cost, not the user's.
+
+**Anti-pattern prevented:** empty-state platforms where the user must invent test data before learning anything — most abandon at that wall.
 
 ---
 

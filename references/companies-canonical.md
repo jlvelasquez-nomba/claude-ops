@@ -1,11 +1,24 @@
 # Companies — canonical engineering sources
 
-**Status:** 🟢 ACTIVE · 12 canonical · 0 partial-verification · 0 TODO
+**Status:** 🟢 ACTIVE · 13 canonical · 0 partial-verification · 0 TODO
 **Per Rule #0 (active interpretation):** entries verified via WebFetch on date noted. Partial-verification entries are honest about what fetch failed and what to retry.
 
 ---
 
 ## Canonical entries
+
+### Microsoft (developer org) · operator-specified
+
+- **Dev portal (verified):** https://developer.microsoft.com/en-us/microsoft-365 (accessed 2026-06-10) — "Microsoft 365 Dev Center | Build intelligent experiences", headline "Reimagine the way people work". Platform areas: Microsoft 365 Copilot (agents), Teams, Microsoft Graph, Mesh, SharePoint Framework (SPFx).
+- **Video channel (verified via yt-dlp, 2026-06-10):** https://www.youtube.com/microsoftdeveloper — channel "Microsoft Developer" (@MicrosoftDeveloper, id UCsMica-v34Irf9KVTh6xx-g), 684k subscribers. Recent titles confirm agent-centric focus: "Work IQ: A2A for Context-Aware, Agentic Experiences", "Your agent anywhere: MultiClient MultiDevice with GitHub Copilot SDK", plus an open-sourcing-history session (TypeScript, .NET, VS Code, Copilot extension).
+- **Verified developer-program structure:** Microsoft 365 Developer Program (free renewable sandbox subscription **pre-configured with sample data**), Technology Adoption Program (early roadmap access + product-group feedback), PnP Community.
+- **Authoritative on:** M365/Copilot agent platform, Teams/Graph integration patterns, developer-onboarding program design at scale
+- **⚠️ Caveats:**
+  - The YouTube page is consent-walled to WebFetch (302 to consent.youtube.com) — verification was via yt-dlp metadata; re-verify the same way
+  - Dev Center copy is marketing-toned; for API-level claims cite learn.microsoft.com docs pages (not yet fetched — separate verification when needed)
+- **Next verification step:** anchor one specific Learn docs page when a protocol cites a Microsoft API pattern
+- **Date verified:** 2026-06-10 (Claude session, WebFetch + yt-dlp)
+- **Reviewed by operator:** ⏳ (sources supplied by operator 2026-06-10)
 
 ### Anthropic
 
