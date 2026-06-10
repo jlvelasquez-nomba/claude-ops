@@ -1,7 +1,7 @@
 # State — claude-ops
 
-**Last updated:** 2026-06-10 by Claude session (Juan) — Mag7 batch processed (Apple, NVIDIA, Meta, Alphabet, AWS + earlier Microsoft)
-**Repo status:** Bootstrap COMPLETE. Rule #0 at v2. `prime` boot protocol live. References: 14 devs canonical + 1 PARTIAL (Carmack), 18 companies canonical, 5 primary-sources canonical + 1 PARTIAL. Playbook: 16 entries canonical + no-fabrication cases. Mag7: 6/7 done — Tesla + xAI names never supplied.
+**Last updated:** 2026-06-10 by Claude session (Juan) — Mag7 list CLOSED; full-capacity audit passed
+**Repo status:** OPERATIONAL AT FULL CAPACITY. Rule #0 v2 + prime boot + 16 protocols. References: 14 devs canonical + 1 PARTIAL (Carmack), 18 companies canonical, 5 primary-sources canonical + 1 PARTIAL. Playbook: 16 canonical patterns + no-fabrication cases. Zero open work items; only optional deepenings remain.
 
 ## 🟢 Complete (in main)
 
@@ -32,9 +32,10 @@
 
 Per Rule #0 active framing: these are work-items, not "Rule #0 forbids it" excuses.
 
-- **Mag7 list: 6/7 done** (Microsoft, Apple, NVIDIA, Meta, Alphabet, AWS — all processed 2026-06-10). **Tesla + xAI names/sources never supplied** — ask operator whether still wanted, or close the line item
+- **Mag7 list: ✅ CLOSED** by operator 2026-06-10 at 6 companies (Microsoft, Apple, NVIDIA, Meta, Alphabet, AWS — all processed; Tesla/xAI dropped)
 - **First Monday article PARTIAL:** title verified, body fetch pending (authors/year/quote)
 - **Coimbra ACM paper:** metadata canonical via Crossref; PDF unread — only needed if its claims get cited
+- **Carmack PARTIAL:** unchanged — Keen Technologies venue still the unlock
 - **Carmack PARTIAL:** no true primary venue reachable (X auth-walled; .plan archive is a verified-but-flagged mirror). Next: check if Keen Technologies publishes a blog/research page
 - **Deepening (optional, not blockers):** rauchg.com essay anchor (429 ×3 — retry later) · one LKML thread quote for Linus · one iWoz chapter quote for Wozniak · one specific cookbook guide URL for OpenAI
 

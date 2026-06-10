@@ -1,6 +1,6 @@
 # Pro Dev Reference Patterns
 
-**Status:** 🟢 ACTIVE · 16 canonical · 0 TODO (operator Mag7 list: 6/7 received + processed; Tesla + xAI names never supplied)
+**Status:** 🟢 ACTIVE · 16 canonical · 0 TODO (operator Mag7 list CLOSED at 6 by operator, 2026-06-10)
 **Purpose:** each entry below is **oil, not friction**. One actionable WHEN/THEN derived from a verified primary source. If I can't invoke it mid-work, it doesn't belong here.
 
 **Per Rule #0:** patterns are derived from facts verified via WebFetch on the date noted in `references/developers-canonical.md`. Where the pattern is my synthesis of the verified content (rather than a direct quote), that's flagged explicitly.
@@ -28,7 +28,7 @@
 | Alphabet (GCloud/YouTube) | ✅ Canonical · quote-anchored (6 pillars) | — |
 | Amazon (AWS) | ✅ Canonical · operator-specified | — |
 
-(Operator's Mag7 list: Microsoft, Apple, NVIDIA, Meta, Alphabet, Amazon — all received + processed 2026-06-10. Tesla + xAI were mentioned on 2026-05-27 but names/sources never supplied.)
+(Operator's Mag7 list: Microsoft, Apple, NVIDIA, Meta, Alphabet, Amazon — all received + processed 2026-06-10. Operator CLOSED the list at 6 on 2026-06-10; Tesla/xAI dropped.)
 
 ---
 
